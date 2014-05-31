@@ -143,11 +143,11 @@ function Draw() {
 
 function makeTree(familyTree) {
     var countOfMembersInLevel = new Array(20).join('0').split('').map(parseFloat),
-        parentsWithProdigy = [],
+        parentsWithHeirs = [],
         i, k, corner;
 
 
-    // First we gonna add all members with prodigy
+    // First we gonna add all members with Hairs
     for (i = 0; i < familyMembers.length; i++) {
         
         countOfMembersInLevel[familyMembers[i].level] = parseInt(countOfMembersInLevel[familyMembers[i].level] + 2);
@@ -162,7 +162,7 @@ function makeTree(familyTree) {
                 text = familyMembers[i]['father'];
             }
 
-            parentsWithProdigy.push(text);
+            parentsWithHeirs.push(text);
 
             familyTree.push(new Kinetic.Rect({
                     x: (k + countOfMembersInLevel[familyMembers[i].level] - 2)* 160 ,
@@ -183,13 +183,13 @@ function makeTree(familyTree) {
         }
     }
 
-    // In this momment in array parentsWithProdigy we have all with childrens. But there are some members without
+    // In this momment in array parentsWithHeirs we have all with childrens. But there are some members without
     // childrens and we gonna add them now:
 
-    parentsWithProdigy.sort();
+    parentsWithHeirs.sort();
     for (i = 0; i < familyMembers.length; i++) {
         for (var j = 0; j < familyMembers[i].children.length; j++) {           
-            if (parentsWithProdigy.indexOf(familyMembers[i].children[j]) == -1)
+            if (parentsWithHeirs.indexOf(familyMembers[i].children[j]) == -1)
             {
                 text = familyMembers[i].children[j];
 
