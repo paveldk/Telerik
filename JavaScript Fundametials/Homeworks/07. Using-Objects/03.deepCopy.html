@@ -1,0 +1,59 @@
+﻿<html>
+
+<head>
+	<title>Data types and variables - Integer types</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1> Write a function that makes a deep copy of an object </h1>
+        <h2>The function should work for both primitive and reference types</h2>
+    </header>
+    <div>
+        <button onclick="Clone()">Click</button>  
+    </div>
+
+	<div id="js-console"></div>				 
+	<script src="scripts/js-console.js"></script>
+	<script>
+		/* Task 3. Write a function that makes a deep copy of an object
+            The function should work for both primitive and reference types
+        */
+
+        function deepCopy(sourceObj, destinationObj) {
+            var destinationObj = destinationObj || {},
+                i;
+
+            for (i in sourceObj) {
+              if (typeof sourceObj[i] === 'object') {
+                destinationObj[i] = (sourceObj[i].constructor === Array)?[]:{};
+                deepCopy(sourceObj[i], destinationObj[i]);
+              } else {
+                    destinationObj[i] = sourceObj[i];
+                }
+            }
+            return destinationObj;
+        }
+
+        function Clone() {
+            var source = {
+                name: 'Jon Snow',
+                hobbies: ['killing', 'fighting']
+            };
+
+            var destination = deepCopy(source);
+
+            jsConsole.writeLine('The source name is :' + source.name);
+            jsConsole.writeLine('The destination name is :' + destination.name);
+
+            source.name = 'Eddard Stark'
+
+            jsConsole.writeLine("Let's change source name : " +  source.name);
+            jsConsole.writeLine("Still, the destination stay the same : " +  destination.name);
+        }
+	</script>
+</body>
+
+</html>

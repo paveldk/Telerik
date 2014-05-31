@@ -1,0 +1,55 @@
+﻿<html>
+
+<head>
+	<title>Draw graphics</title>
+	<link href="styles/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <canvas id="the-canvas" width="800" height="600"></canvas>
+				 
+	<script>
+		// Task2. Draw a circle that flies inside a box. When it reaches an edge, it should bounce that edge
+
+		window.onload = function () {
+			var canvas = document.getElementById("the-canvas"),
+			ctx = canvas.getContext("2d"),
+			x = 100,
+			y = 100,
+			r = 25,
+			width = canvas.width,
+			height = canvas.height,
+			updateX = 5,
+			updateY = 5;
+
+			function animationFrame(){
+				ctx.clearRect (0, 0 ,800 ,600);
+				ctx.fillStyle = 'red';	
+				ctx.strokeStyle = '#000';
+				ctx.lineWidth=2;
+
+				ctx.beginPath();
+					ctx.arc(x, y, r, 0, 2*Math.PI);				
+				ctx.stroke();
+				ctx.fill();	
+
+				if ( y < 0|| y > height) {
+					updateY = -updateY;
+				}
+				
+				if (x < 0 || x > width) {
+					updateX = -updateX;
+				}
+				
+				x+=updateX;
+				y+=updateY;
+
+				requestAnimationFrame(animationFrame);	
+			}
+
+			animationFrame();
+		}
+	</script>
+</body>
+
+</html>

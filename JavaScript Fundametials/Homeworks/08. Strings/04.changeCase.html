@@ -1,0 +1,158 @@
+﻿<html>
+
+<head>
+    <title>Strings homework</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1> 
+            You are given a someString. Write a function that changes the someString in all regions:
+        </h1>       
+        <ul>
+            <li>
+                &lt;upcase&gt;someString&lt;/upcase&gt; to uppercase.
+            </li>
+             <li>
+                &lt;lowcase&gt;someString&lt;/lowcase&gt; to lowercase
+            </li>
+            <li>
+                &lt;mixcase&gt;someString&lt;/mixcase&gt; to mix casing(random)
+            </li>           
+        </ul>
+        <code>
+            We are &lt;mixcase&gt;living&lt;/mixcase&gt; in a &lt;upcase&gt;yellow submarine&lt;/upcase&gt;. We &lt;mixcase&g;tdon't&lt;/mixcase&gt; have &lt;lowcase&gt;ANYTHING&lt;/lowcase&gt; else.
+        </code>
+        <h2> 
+            The expected result:
+        </h2>  
+        <code>
+            We are LiVinG in a YELLOW SUBMARINE. We dOn'T have anything else.
+        </code>
+        <h2> 
+            Regions can be nested
+        </h2>
+    </header>
+    <div>
+        <label for = "someString"> Input string: </label>
+        <input type = "text" id = "someString" class = "Task4">  
+
+        <button onclick="changeCase(document.getElementById('someString').value)">Check</button> 
+    </div>
+
+	<div id="js-console"></div>				 
+	<script src="scripts/js-console.js"></script>
+    <script src="scripts/stringFormat.js"></script>
+	<script>
+		/* Task 4. You are given a someString. Write a function that changes the someString in all regions:
+            <upcase>someString</upcase> to uppercase.
+            <lowcase>someString</lowcase> to lowercase
+            <mixcase>someString</mixcase> to mix casing(random)
+
+            We are <mixcase>living</mixcase> in a <upcase>yellow submarine</upcase>. We <mixcase>don't</mixcase> have <lowcase>anything</lowcase> else.
+
+            The expected result:
+
+            We are LiVinG in a YELLOW SUBMARINE. We dOn'T have anything else.
+
+            Regions can be nested
+        */
+
+        function changeCase(someString) {
+            var upOpenTag = "<upcase>",
+                upCloseTag = "</upcase>",
+                lowOpenTag = "<lowcase>",
+                lowCloseTag = "</lowcase>",
+                mixOpenTag = "<mixcase>",
+                mixCloseTag = "</mixcase>",
+                upString = '',
+                lowString = '',
+                mixString ='',
+                indexOpenTag = someString.indexOf(upOpenTag),
+                indexCloseTag = someString.indexOf(upCloseTag); 
+
+            // Upcase
+            while (indexOpenTag >= 0) 
+            {     
+                // then till we find oppening tags we add in our exit string:
+                // someString before oppening tags(If there is such)
+                upString = upString + someString.substring(0, indexOpenTag);
+
+                // we place the oppening tag position after the tag itself
+                indexOpenTag += upOpenTag.length;
+                
+                // the we add the someString between tabs TO UPPER
+                upString = upString + someString.substr(indexOpenTag, indexCloseTag - indexOpenTag).toUpperCase();
+                
+                // then the someString AFTER the closing tabs is assigned to our original someString, 
+                // replacing it and we're ready to search for another tags, if there is such
+                // all of that till we find oppening tags
+                someString = someString.substr(indexCloseTag + upCloseTag.length, someString.length - indexCloseTag - upCloseTag.length);
+                
+                indexOpenTag = someString.indexOf(upOpenTag);
+                indexCloseTag = someString.indexOf(upCloseTag);
+            }
+
+            // at the end we add any someString left after last closing tag, if there is such
+            upString = upString + someString;
+
+            // Lower case
+            indexOpenTag = upString.indexOf(lowOpenTag),
+            indexCloseTag = upString.indexOf(lowCloseTag);
+          
+            while (indexOpenTag >= 0) 
+            {     
+                lowString = lowString + upString.substring(0, indexOpenTag);
+
+                indexOpenTag += lowOpenTag.length;
+                
+                lowString = lowString + upString.substr(indexOpenTag, indexCloseTag - indexOpenTag).toLowerCase();
+                
+                upString = upString.substr(indexCloseTag + lowCloseTag.length, upString.length - indexCloseTag - lowCloseTag.length);
+                
+                indexOpenTag = upString.indexOf(lowOpenTag);
+                indexCloseTag = upString.indexOf(lowCloseTag);
+            }
+
+            lowString = lowString + upString;
+
+            // Mix case
+            indexOpenTag = lowString.indexOf(mixOpenTag),
+            indexCloseTag = lowString.indexOf(mixCloseTag);
+
+            while (indexOpenTag >= 0) 
+            {     
+                mixString = mixString + lowString.substring(0, indexOpenTag);
+
+                indexOpenTag += mixOpenTag.length;
+                
+                var textInMixTag = lowString.substr(indexOpenTag, indexCloseTag - indexOpenTag).toLowerCase(),
+                    mixedText = '';
+
+                // When we found text in MixCase tag we loot him and replace every char with upper or lower on 50% chance
+                for (var i = 0; i < textInMixTag.length; i++) {
+                    if (parseInt(Math.random()*2) > 0.5) {
+                        mixedText = mixedText + textInMixTag[i].toLowerCase()
+                    } else {
+                        mixedText = mixedText + textInMixTag[i].toUpperCase();
+                    }
+                }
+
+                mixString = mixString + mixedText;
+                
+                lowString = lowString.substr(indexCloseTag + mixCloseTag.length, lowString.length - indexCloseTag - mixCloseTag.length);
+                
+                indexOpenTag = lowString.indexOf(mixOpenTag);
+                indexCloseTag = lowString.indexOf(mixCloseTag);
+            }
+
+            mixString = mixString + lowString;
+
+            jsConsole.writeLine(mixString);
+        }
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+/* CSS Document */
+html, body, div, fieldset, label, nav, aside, form, ul, li, input
+{
+	border: none;
+	margin: 0;
+	-ms-word-wrap: break-word;
+	padding: 0;
+	text-decoration: none;	
+	word-wrap: break-word;
+}
+
+body
+{
+	background-color: #1E3741;
+	font-size: 16px;
+}
+
+nav ul
+{
+	list-style-type : none;
+}
+
+nav li
+{
+	float: left;
+	margin : 1px;
+	padding: 5px 10px;
+	background-color: #4B5F67;
+	height: 23px;
+}
+
+li a
+{
+	text-decoration: none;
+	color : #819495;
+	font-weight: 700;
+}
+
+.underlined
+{
+	text-decoration: underline;
+}
+
+nav li.active {
+	background-color: #1E3741;
+}
+
+nav li.active a{
+	color: #FFF;
+}
+
+nav
+{
+	margin-top: 10px;
+}
+
+h1
+{
+	background-color: #00968C;
+	font-size: 1rem;
+	height: 30px;
+	padding-top: 10px;
+	padding-left: 10px;
+	color: #fff;
+}
+
+section
+{
+	width : 286px;
+	float : left;
+}
+
+section li
+{
+	margin-right: 20px;
+	margin-left : 10px;
+}
+
+iframe
+{
+	position: absolute;
+	top : 60px;
+	left : 290px;
+	width : 440px;
+	height: 300px;
+}
+
+img
+{
+	position: absolute;
+	top : 60px;
+	left : 290px;
+	width : 440px;
+	height: 300px;
+}
+
+#wrapper
+{
+	width: 770px;
+	height: 390px;
+	border: 1px solid #4D7399;
+}
+
+hr
+{
+	height: 0px;
+	background-color: #354A54;
+	color: #354A54;
+    border: 0; 
+    border-top: 1px solid #354A54;
+    padding: 0; 
+}

@@ -1,0 +1,94 @@
+/* CSS Document */
+html,article, h1, p, img, form, div, button, input, label
+{
+	border: none;
+	margin: 0;
+	-ms-word-wrap: break-word;
+	padding: 0;
+	text-decoration: none;	
+	word-wrap: break-word;
+}
+
+html
+{
+	font-size : 14px;
+}
+
+body 
+{
+    background: #3B3B3B;
+    color: #A9A9A9;
+    font-family: Verdana, sans-serif;
+}
+
+h1
+{
+	font-size: 2rem;
+	color : #F8D619;
+	margin-top: 1.4rem;
+	margin-bottom: 1.4rem;
+}
+
+p
+{
+	width: 45.71rem;
+}
+
+img
+{
+	float:left;
+	margin-top : -0.36rem;
+}
+
+form
+{
+	margin-left : 4rem;
+}
+
+article strong 
+{
+    color: #F8F8F8;
+    font-weight: normal;
+}
+
+label
+{
+	font-size: 1.4rem;
+}
+
+#member-login
+{
+	background: -webkit-linear-gradient(#3B3B3B, #272727); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#3B3B3B, #272727); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#3B3B3B, #272727); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#3B3B3B, #272727); /* Standard syntax */
+	padding: 0.72rem 1.43rem 0.72rem 0.72rem;
+	color: #fff;
+	height: 3rem;
+	min-width: 45.71rem;
+}
+
+#go
+{
+	background: rgba(229, 110, 110, .9);
+	border: 0.07rem solid #fff;
+    border-radius: 10px;
+    box-shadow: inset 0rem -1.07rem 0.36rem #EC0B0F;
+    color: #fff;
+	margin-top: -0.21rem;
+    padding: 0.36rem 1.07rem;
+    text-transform: uppercase;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #000;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #000;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #000;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #000;
+}

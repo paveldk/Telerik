@@ -1,0 +1,16 @@
+.tab-strip
+{
+	display:inline-block;position:relative
+}
+.tab-strip>li
+{
+	display:inline-block
+}
+.tab-strip>li.current .tab-content
+{
+	display:block
+}
+.tab-strip>li .tab-content
+{
+	display:none;position:absolute;border-top:none
+}

@@ -1,0 +1,106 @@
+/* CSS Document */
+html, body, div, ul, li, a
+{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;	
+	word-wrap: break-word;
+}
+
+html, body {
+	font-family: Constantina, Georgia, 'Nimbus Roman No9 L', serif;
+	font-size: 16px;
+}
+
+#wrapper {
+	width: 960px;
+}
+
+ul
+{
+	list-style-type : none;
+}
+
+.menu li ul
+{
+	display : none;
+	position : absolute;
+}
+
+img
+{
+	display : none;
+}
+
+.menu li
+{
+	margin-top: 10px;
+	margin-left : 5px;
+	padding-top: 10px;
+	width : 170px;
+	height: 28px;
+	border-radius: 15px;
+	text-align: center;
+	background-color: #B6FF00;
+	position : relative;
+}
+
+.menu li:first-child 
+{
+	margin-top: 7px;
+}
+
+.menu li > a
+{
+	color : black;
+}
+
+.menu li > a:hover
+{
+	text-decoration:underline;
+}
+
+.menu li:hover ul
+{
+	display : inline-block;
+	position : absolute;
+    left: 165px;
+    top : -5px;
+    width:240px;  
+}
+
+.menu li:hover ul li
+{
+	width : 540px;
+	height: 40px;
+	border-radius: 10px;
+	text-align: left;
+	background-color: #008000; 
+    padding-top: 18px;
+}
+
+.menu li:hover ul li a
+{
+	margin-left : 20px;
+	vertical-align: middle;
+	color : white;
+}
+
+.menu li ul li:hover
+{
+	width : 540px;
+	height: 310px;
+}
+
+
+.menu li ul li:hover img
+{
+	display: block;
+	width : 500px;
+	height: 250px;
+	margin : 20px;
+	border-radius: 10px;
+}
+
+
+

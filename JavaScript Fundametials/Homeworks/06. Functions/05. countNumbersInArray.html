@@ -1,0 +1,94 @@
+﻿<html>
+
+<head>
+	<title>Data types and variables - Integer types</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="styles/styles1.css">
+</head>
+
+<body>
+    <h1> 
+        Write a function that counts how many times given number appears in given array. Write a test function to check if the function is working correctly
+    </h1>
+    <div>
+        <label for = "numbers">Input numbers(separated by ','):</label>
+        <input type = "text" id = "numbers"> 
+        <label for = "numbers">Input number to search for:</label>
+        <input type = "text" id = "searchedNumber"> 
+        <button onclick="countNumbers(document.getElementById('numbers').value, document.getElementById('searchedNumber').value)">Count</button> 
+        <button onclick="runTests()">Run tests</button> 
+    </div>
+
+    <div></div>
+    <div></div>
+    <div></div>
+
+	<div id="js-console"></div>				 
+	<script src="scripts/js-console.js"></script>
+	<script>
+		// Task 5 : Write a function that counts how many times given number appears in given array. Write a test function to check if the function is working correctly
+        function countNumbers(numbers, searchedNumber) {                     
+            var arrayOfNumbers = numbers.split(','),
+                count = 0,
+                i;
+
+            for (i = 0; i < arrayOfNumbers.length; i++) {
+                if (arrayOfNumbers[i] === searchedNumber) {
+                    count++;
+                };
+            };
+
+            return count;
+        }
+
+        function runTests() {
+            jsConsole.writeLine('Positive tests:');
+            jsConsole.writeLine('Test one : the array is 4,5,2,3,5,5, search number is 5, the result should be 3 times:');
+            if (countNumbers('4,5,2,3,5,5', '5') === 3) {
+                jsConsole.writeLine('The test is successful')
+            } else {
+                jsConsole.writeLine('The test failed')
+            }
+            
+
+            jsConsole.writeLine('Test two : the array is 4,4,2,3,5,4,4,8,4,5,3,4,5 search number is 4, the result should be 6 times:');
+            if (countNumbers('4,4,2,3,5,4,4,8,4,5,3,4,5', '4') === 6) {
+                jsConsole.writeLine('The test is successful')
+            } else {
+                jsConsole.writeLine('The test failed')
+            }
+            
+            jsConsole.writeLine('Test three : the array is 1,-9,9 search number is 9, the result should be 1 time:');
+            if (countNumbers('1,-9,9', '9') === 1) {
+                jsConsole.writeLine('The test is successful')
+            } else {
+                jsConsole.writeLine('The test failed')
+            }
+
+            jsConsole.writeLine('Negative tests:');
+            jsConsole.writeLine('Test one : the array is 4,5,2,3,5,5, search number is 2, the result should be 3 times:');
+            if (countNumbers('4,5,2,3,5,5', '2') === 3) {
+                jsConsole.writeLine('The test is successful')
+            } else {
+                jsConsole.writeLine('The test failed')
+            }
+            
+
+            jsConsole.writeLine('Test two : the array is 4,4,2,3,5,4,4,8,4,5,3,4,5 search number is 4, the result should be 10 times:');
+            if (countNumbers('4,4,2,3,5,4,4,8,4,5,3,4,5', '10') === 6) {
+                jsConsole.writeLine('The test is successful')
+            } else {
+                jsConsole.writeLine('The test failed')
+            }
+            
+            jsConsole.writeLine('Test three : the array is 1,-9,9 search number is 9, the result should be 2 times:');
+            if (countNumbers('1,-9,9', '9') === 2) {
+                jsConsole.writeLine('The test is successful')
+            } else {
+                jsConsole.writeLine('The test failed')
+            }            
+        }
+	</script>
+</body>
+
+</html>

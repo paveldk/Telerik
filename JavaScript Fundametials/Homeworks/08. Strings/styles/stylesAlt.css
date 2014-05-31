@@ -1,0 +1,46 @@
+/* CSS Document */
+html, body, h1, h2
+{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;	
+	word-wrap: break-word;
+}
+
+h1, h2 {
+	font-size: 20px;
+}
+
+input[type="text"].Task4  {
+	width: 600px;
+}
+
+button.Task1  {
+	width: 200px;
+}
+
+code {
+	background-color: #ccc;
+	display: inline-block;
+}
+
+code span {
+	color: red;
+}
+
+textarea
+{
+	width :560px;
+	height:60px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+label, textarea, button, input {
+	float : left;
+	margin-right: 10px;
+}
+
+label, button {
+	margin-top: 25px;
+}

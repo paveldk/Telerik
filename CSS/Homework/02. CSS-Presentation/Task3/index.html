@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Strange picture</title>	
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<script>
+        var html = "";        
+		var count = 60;
+        for (var i = 0; i < count; i++)
+        {
+			if(i % 3 == 0)
+			{
+				html += "<div class=\"red\">";
+			}
+			else
+			{
+				html += "<div>";
+			}
+        }
+		
+        for (var i = 0; i < count; i++)
+        {
+            html += "</div>";
+        }
+		
+        document.write(html);
+	</script>
+</body>
+</html>

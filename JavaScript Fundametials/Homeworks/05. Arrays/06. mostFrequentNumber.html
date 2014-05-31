@@ -1,0 +1,55 @@
+﻿<html>
+
+<head>
+	<title>Data types and variables - Integer types</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+
+<body>
+    <h1> 
+        Write a program that finds the most frequent number in an numbers. 
+        Example: {4,1,1,4,2,3,4,4,1,2,4,9,3}  4 (5 times)
+    </h1>
+
+     <div>
+        <label for = "sequence">Input sequence of numbers(separated by ','):</label>
+        <input type = "text" id = "sequence"> 
+        <button onclick="mostFrequentNumber(document.getElementById('sequence').value)">Find</button>   
+    </div>
+
+
+	<div id="js-console"></div>				 
+	<script src="scripts/js-console.js"></script>
+	<script>
+		// Task6 : Write a program that finds the most frequent number in an numbers. Example: {4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3}  4 (5 times)
+  
+        function mostFrequentNumber(sequence) {
+            var numbers = sequence.split(",");
+
+            numbers.sort(); // we sort the numbers - for easier count, now the numbers gonna be group
+            var currentCount = 1, //two counts, temp 
+                count = 1, //and final
+                number = numbers[0], //and the most frequent number
+                i;
+
+            for (i = 1; i < numbers.length; i++) {
+                if (numbers[i] === numbers[i - 1]) {
+                    currentCount++;     //if this is equal to previous ++ and the number stay the same - first one.   
+                }
+                else if (currentCount > count) { //else only if currentcount is bigger than final, becouse if not we already find our targets, we:             
+                    count = currentCount; //get new value for the final variable
+                    currentCount = 1;     //start looking again for better sequence         
+                    number = numbers[i - 1]; //and save our new number
+                }
+                else {
+                   currentCount = 1; // if the current strike is over, but it's still not bigger count we have to make current back to 1
+                }                   
+            }
+
+            jsConsole.writeLine('The most frequent number is the number ' + number + ' - ' + count + ' times.');
+        }
+	</script>
+</body>
+
+</html>

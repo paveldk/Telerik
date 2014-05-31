@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. SurfaceCalculations", "SurfaceCalculations\01. SurfaceCalculations.csproj", "{8B500C51-1549-47E0-988A-62256694AA3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Bank", "Bank\02. Bank.csproj", "{4FB20AFC-C36B-4799-875B-8D39108138E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. CustomExceptions", "InvalidRangeException\03. CustomExceptions.csproj", "{ACA85314-615F-4989-8170-A29132AF4E44}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B500C51-1549-47E0-988A-62256694AA3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B500C51-1549-47E0-988A-62256694AA3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B500C51-1549-47E0-988A-62256694AA3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B500C51-1549-47E0-988A-62256694AA3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FB20AFC-C36B-4799-875B-8D39108138E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FB20AFC-C36B-4799-875B-8D39108138E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FB20AFC-C36B-4799-875B-8D39108138E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FB20AFC-C36B-4799-875B-8D39108138E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACA85314-615F-4989-8170-A29132AF4E44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACA85314-615F-4989-8170-A29132AF4E44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACA85314-615F-4989-8170-A29132AF4E44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACA85314-615F-4989-8170-A29132AF4E44}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

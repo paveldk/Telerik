@@ -1,0 +1,152 @@
+/* CSS Document */
+html, body, h1, h2, dl, dt, dd, ul, li, p
+{
+	border: none;
+	margin: 0;
+	-ms-word-wrap: break-word;
+	padding: 0;
+	text-decoration: none;	
+	word-wrap: break-word;
+}
+
+body 
+{
+    background: #F1F1F1;
+    font: 12px/1.2 Verdana, sans-serif;
+}
+
+dl
+{
+	margin-top: 10pt;
+}
+
+dd a 
+{ 
+	color: #434343; 
+	text-decoration: none;
+}
+
+dt a
+{
+	color:#911C1C;
+	font-weight: 700;
+	text-decoration: none;	
+}
+
+h1, h2, p 
+{ 
+	margin-bottom: 10px; 
+}
+
+h2 
+{
+	background: #808080;
+    color: #fff;
+    font-size: 100%;
+    padding: 3px;  
+}
+
+img
+{
+	margin :15px 0px -2px 0px;
+}
+
+.aside
+{
+	float : left;	
+	margin-left : 5px;
+	text-align: center;
+	width : 156px;
+}
+
+.aside ul
+{
+	list-style-type: none;
+}
+
+.aside ul a
+{
+	color: #992323;
+}
+
+.border
+{
+	background: #fff;
+	border: 1px solid #8A8A8A;
+	margin-bottom: 4px;
+    padding-bottom: 4px;      
+}
+
+#CssTut
+{
+	height: 150px;
+}
+
+.home
+{
+	display: inline-block;
+	font-size: 13px;
+	margin-bottom: 0px;
+	text-transform:uppercase;	
+}
+
+.inline li
+{
+	display : inline;
+}
+
+.img_css 
+{
+    float: left;
+    margin-right: 10px;
+}
+
+.insiteNavigation a 
+{
+	border: 1px solid #2A2A2A;
+    color: #0F0F0F;
+    display: inline-block;
+    padding: 3px;
+    text-align: center;
+    text-decoration: none;
+    width: 100px;      
+}
+
+.main
+{
+	background-color: #fff;
+	border: 2px solid #ADADAD;
+	float : left;
+	height: 570px;
+	margin-left : 5px;
+	padding : 15px 5px 5px 5px;
+	width : 630px;		
+}
+
+.main a
+{
+	color : #911C1C;
+}
+
+.nav
+{
+	float : left;
+	width : 140px;
+}
+
+.next
+{
+	margin-right : -36px;
+	padding-left: 22px;	
+}
+
+.previous
+{
+	margin-left : -20px;
+	padding-right: 10px;
+}
+
+.search
+{
+	width: 110px;
+}

@@ -1,0 +1,54 @@
+/* CSS Document */
+html
+{
+	font-size: 16px;
+}
+
+body
+{
+	background-color: #595959;
+}
+
+h1
+{
+	color : #959595;
+	font-size: 1.5rem;
+}
+
+dt
+{
+	color : #CDCBC8;
+	font-style : italic;
+	font-weight : bold;	
+}
+
+dd, a
+{
+	color : #D4D2A5;
+}
+
+a
+{
+	text-decoration: none
+}
+
+	a:hover 
+	{ 
+		color: red;
+		text-decoration: underline;		
+	}
+
+.action
+{
+	color: #969B9C;
+}
+
+#support
+{
+	color : #D90806;
+}
+
+#status
+{
+	color : #D86C2D
+}

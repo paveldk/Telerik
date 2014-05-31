@@ -1,0 +1,73 @@
+/* CSS Document */
+/* Не съм пипал по никакъв начин HTML кода, като според мен картинката е само пример за това как трябва да изглежда, т.е. 
+липсващия там параграф не трябва да го крием */
+html
+{
+	font-size: 18px;   
+}
+
+body
+{
+	background-color : #A9A9A9;
+}
+
+h1
+{
+	color : #FAFAD2;
+	font-size: 2.33rem;
+	text-align : center;
+}
+
+footer p
+{
+	font-size: 0.78rem;
+	text-align : left;		
+}
+
+section h1
+{
+	font-size: 1.44rem;
+	text-align : left;	
+}
+
+ul
+{	
+	font-size: 1.22rem;
+	list-style: none;
+	font-weight : bold;	
+	text-align : center;
+}
+
+a
+{
+	color : #fff;
+	text-decoration: none;	
+}
+
+	a:hover 
+	{ 
+		color: blue;
+		text-decoration: underline;		
+		border-bottom-color: #fff;
+	}
+
+footer
+{
+	text-align : center;
+}
+
+section footer a
+{
+	color : #000;
+}
+
+li:last-of-type
+{
+	text-decoration:underline;
+	color: #fff;
+}
+
+.current
+{
+	background-color : #D3D3D3;
+}

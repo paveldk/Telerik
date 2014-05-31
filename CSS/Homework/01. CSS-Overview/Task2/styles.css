@@ -1,0 +1,36 @@
+/* CSS Document */
+table 
+{
+	border: 1px solid black;
+	border-collapse: collapse;	
+	width : 50%;
+}
+
+th
+{
+	background-color: #52B506;
+	color : #E4F4D9;
+	padding-left:2%;
+	text-align : left;
+	
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;		
+}
+
+td
+{
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+	padding-left:2%;
+}
+
+tr
+{
+	width : 80%;
+}
+
+tr:nth-child(2n)
+{
+	background-color: #ECECD8;
+}

@@ -1,0 +1,71 @@
+﻿<html>
+
+<head>
+	<title>Select all divs in divs</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+
+<body>
+	<div>
+		This is div
+		<div>
+			This is div in a div
+			<div>
+				This is a div in a div in a div
+			</div>
+			<div>
+				This is another div in a div in a div.
+				There are two more divs, but only 3 in other divs!
+			</div>
+		</div>
+	</div>
+
+	<div>
+        <label>Count with getElementsByTagName()</label>
+        <button onclick="countWithGetElements()">Count</button>  
+    </div>
+
+    <div>
+        <label>Count with querySelectorAll()</label>
+        <button onclick="countWithQuery()">Count</button>  
+    </div>
+
+	<div id="js-console"></div>				 
+	<script src="scripts/js-console.js"></script>
+	<script>
+		/* Task 1 : Write a script that selects all the div nodes that are directly inside other div elements
+		Create a function using querySelectorAll()
+		Create a function using getElementsByTagName()*/
+
+		function countWithGetElements(){
+			var allDivs = document.getElementsByTagName('div'),
+				divsInDivs = [];
+
+			for (var i = 0, len = allDivs.length;i < len; i++) {
+				if (allDivs[i].parentElement instanceof HTMLDivElement) {
+          			divsInDivs.push(allDivs[i]);
+          		}
+			};
+
+			for (var i = 0, len = divsInDivs.length;i < len; i++) {
+				jsConsole.writeLine(divsInDivs[i].innerText);
+				jsConsole.writeLine("");
+			};
+
+			jsConsole.writeLine("Count:" + divsInDivs.length);
+		}
+
+		function countWithQuery(){
+			var divsInDivs = document.querySelectorAll('div div'); 
+
+			for (var i = 0, len = divsInDivs.length;i < len; i++) {
+				jsConsole.writeLine(divsInDivs[i].innerText);
+				jsConsole.writeLine("");
+			};
+
+			jsConsole.writeLine("Count:" + divsInDivs.length);
+		}
+	</script>
+</body>
+
+</html>

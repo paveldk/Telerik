@@ -1,0 +1,25 @@
+body
+{
+	.tab-strip 
+	{	
+		display: inline-block;
+  		position: relative;
+
+		& > li
+		{
+			display: inline-block;
+
+			&.current{
+      			.tab-content{
+        			display: block;
+      			}
+    		}
+
+    		.tab-content{
+		        display: none;
+		        position: absolute;
+		        border-top: none;
+		    }
+    	}
+	}
+}

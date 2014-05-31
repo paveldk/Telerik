@@ -1,0 +1,28 @@
+﻿<html>
+
+<head>
+	<title>gets the value of input type="text"</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+
+<body>
+	<div>
+        <label for = "someText">Input something</label>
+        <input type = "text" id = "someText" name = "number"> 
+        <button onclick="getTheValue()">Get the value</button>  
+    </div>
+
+	<div id="js-console"></div>				 
+	<script src="scripts/js-console.js"></script>
+	<script>
+		/* Task 2 : Create a function that gets the value of <input type="text"> ands prints its value to the console */
+
+		function getTheValue(){
+			var value = document.querySelector('input[type="text"]');
+
+			jsConsole.writeLine(value.value);
+		}		
+	</script>
+</body>
+
+</html>

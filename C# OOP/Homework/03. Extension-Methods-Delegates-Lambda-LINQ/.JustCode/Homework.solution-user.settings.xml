@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<JustCodeSettings Version="0.0" Timestamp="bb953258-0655-4b5c-89f0-e24130741064">
+  <IgnoredErrorsAndWarningsSettings xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+    <IgnoredErrorsAndWarnings Version="2">
+      <FilePath>
+        <FileRelativePath>FirstNameBeforeLastName/Properties/AssemblyInfo.cs</FileRelativePath>
+        <ProjectRelativePath>FirstNameBeforeLastName/02.%20Students%20-%20Task%203,4,5.csproj</ProjectRelativePath>
+        <IgnoredElement>
+          <TextualIdentifier>10113840695211819355</TextualIdentifier>
+        </IgnoredElement>
+      </FilePath>
+      <FilePath>
+        <FileRelativePath>NumberDivisableBy3And7/Properties/AssemblyInfo.cs</FileRelativePath>
+        <ProjectRelativePath>NumberDivisableBy3And7/03.%20NumberDivisableBy3And7%20-%20Task%206.csproj</ProjectRelativePath>
+        <IgnoredElement>
+          <TextualIdentifier>10113840695211819355</TextualIdentifier>
+        </IgnoredElement>
+      </FilePath>
+    </IgnoredErrorsAndWarnings>
+  </IgnoredErrorsAndWarningsSettings>
+</JustCodeSettings>

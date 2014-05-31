@@ -1,0 +1,192 @@
+﻿<html>
+
+<head>
+	<title>Data types and variables - Integer types</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+
+<body>
+    <h1> 
+        Write a function that groups an personsay of persons by age, first or last name. The function must return an associative personsay, with keys - the groups, and values -personsays with persons in this groups(Use function overloading (i.e. just one function))
+    </h1>
+     <code>
+        <ul>
+            <li>var persons = {…};</li>
+            <li>var groupedByFname = group(persons, 'firstname');</li>
+            <li>var groupedByAge= group(persons, 'age');</li>
+        </ul>
+    </code>
+    <div>
+        <label for = "property">Select property: </label>
+        <select id="property">
+            <option value="fname">First name</option>
+            <option value="lname">Last name</option>
+            <option value="age">Age</option>
+        </select> 
+        <button onclick="groupPersons(document.getElementById('property').value)">Group</button>  
+    </div>
+
+	<div id="js-console"></div>				 
+	<script src="scripts/js-console.js"></script>
+	<script>
+		/* Task 6. Write a function that groups an personsay of persons by age, first or last name. The function must return an associative personsay, with keys - the groups, and values -personsays with persons in this groups(Use function overloading (i.e. just one function))
+            var persons = {…};
+            var groupedByFname = group(persons, 'firstname');
+            var groupedByAge= group(persons, 'age');
+        */
+
+        function buildPerson(fname, lname, age) {
+          return {
+            fname: fname, 
+            lname: lname,
+            age: age,
+            toString: function () {return 'Name : ' + this.fname + ' ' + this.lname + ', age : ' + this.age;}
+          }
+        }
+
+        function group(persons, property) {
+            var groupedPersons = [],
+                finalPersons = [];
+
+            switch(property) {
+            case 'fname':
+                var uniqueFName = []; 
+
+                // first we check for every unique name in all objects and push it in uniqueFName array
+                for (var i = 0; i < persons.length; i++) {
+                    var unique = false; 
+
+                    for (var j = 0; j < i; j++) {
+                        if (persons[i].fname == persons[j].fname) {
+                            unique = true;
+                            break; 
+                        }
+                    }
+
+                    if (unique == false) { 
+                        uniqueFName.push(persons[i]);
+                    }
+                }
+
+                // then using those unique names we create groups with every person having this first name
+                for (i = 0; i < uniqueFName.length; i++) {
+                    var groupByFname = [];
+
+                    for (j = 0; j < persons.length; j++) {
+                        if (uniqueFName[i].fname == persons[j].fname) {
+                            groupByFname.push(persons[j]);
+                        }
+                    }
+                    groupedPersons.push(groupByFname);
+                }
+
+                // and finally we push into final array the group persons with key first name and value, the record
+                for (i = 0; i < groupedPersons.length; i++) {
+                    finalPersons.push({ Key: groupedPersons[i][0].fname, Value: groupedPersons[i] });
+                }
+                
+                break;
+            case 'lname':
+                // Similar just with using last name
+                var uniqueLName = []; 
+
+                for (var i = 0; i < persons.length; i++) {
+                    unique = false; 
+
+                    for (var j = 0; j < i; j++) {
+                        if (persons[i].lname == persons[j].lname) {
+                            unique = true;
+                            break; 
+                        }
+                    }
+
+                    if (unique == false) { 
+                        uniqueLName.push(persons[i]);
+                    }
+                }
+
+                for (var i = 0; i < uniqueLName.length; i++) {
+                    groupByLName = [];
+
+                    for (var j = 0; j < persons.length; j++) {
+                        if (uniqueLName[i].lname == persons[j].lname) {
+                            groupByLName.push(persons[j]);
+                        }
+                    }
+                    groupedPersons.push(groupByLName);
+                }
+
+                for (var i = 0; i < groupedPersons.length; i++) {
+                    finalPersons.push({ Key: groupedPersons[i][0].lname, Value: groupedPersons[i] });
+                }
+                
+                break;
+            case 'age':
+                // again but with Age
+                var uniqueAges = []; 
+
+                for (i = 0; i < persons.length; i++) {
+                    unique = false; 
+
+                    for (j = 0; j < i; j++) {
+                        if (persons[i].age == persons[j].age) {
+                            unique = true;
+                            break; 
+                        }
+                    }
+
+                    if (unique == false) { 
+                        uniqueAges.push(persons[i]);
+                    }
+                }
+
+                for (i = 0; i < uniqueAges.length; i++) {
+                    groupByAge = [];
+
+                    for (j = 0; j < persons.length; j++) {
+                        if (uniqueAges[i].age == persons[j].age) {
+                            groupByAge.push(persons[j]);
+                        }
+                    }
+                    groupedPersons.push(groupByAge);
+                }
+
+                for (i = 0; i < groupedPersons.length; i++) {
+                    finalPersons.push({ Key: groupedPersons[i][0].age, Value: groupedPersons[i] });
+                }
+
+                break;
+            }
+
+            return groupedPersons;
+        }
+
+        function groupPersons(property) {
+            var persons = [
+                    buildPerson('Gosho', 'Goshov', 32), 
+                    buildPerson('Dancho', 'Peshov', 32),
+                    buildPerson('Gosho', 'Draganov', 16),
+                    buildPerson('Bay', 'Bayov', 32),
+                    buildPerson('Gosho', 'Peshov', 56)
+                ],
+                i;
+
+            jsConsole.writeLine("The persons are :");
+            for (i = 0; i < persons.length; i++) {
+                jsConsole.writeLine(persons[i]);
+            };
+
+            jsConsole.writeLine(persons[1]);
+
+            jsConsole.writeLine("And grouped:");
+            var groupedPersons = group(persons, property);
+
+            for (i = 0; i < groupedPersons.length; i++) {
+                jsConsole.writeLine(groupedPersons[i]);
+            };
+        }
+	</script>
+</body>
+
+</html>

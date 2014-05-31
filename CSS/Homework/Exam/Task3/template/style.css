@@ -1,0 +1,129 @@
+/* CSS Document */
+html, body, div, h1, img, button, strong, ul, li
+{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;	
+	word-wrap: break-word;
+}
+
+body {
+  font-size: 14px;
+  font-family: 'Times New Roman';
+}
+#root {
+  width: 720px;
+}
+
+#large
+{
+	float: left;
+	margin-left : 5px;
+    margin-top : 3px;
+	border : 2px solid #999;
+	height: 393px;
+	width : 490px;
+}
+#list
+{
+	margin-top : 3px;
+	float : left;
+	width : 200px;
+	height: 396px;
+	border : 2px solid #999;
+	text-align: center;
+}
+
+#large img
+{
+	margin-left : 15px;
+    border-radius: 5px;
+    border : 2px solid #999;
+}
+
+#large h1
+{
+	text-align: center;
+	margin-top: 18px;
+	margin-bottom: 20px;
+}
+
+button
+{
+	border-radius: 5px;
+    border : 2px solid #999;
+    width : 98px;
+    height: 51px;
+    font-size : 15px;
+    background-color: #ccc;
+}
+
+#list>strong
+{
+	font-size: 21px;
+    display: inline-block;
+    margin-top : 5px;
+    margin-bottom: 5px;
+}
+
+ul
+{
+	list-style-type: none;
+	overflow-y: scroll;
+	height: 300px;
+}
+
+li
+{
+	border-bottom : 2px solid #999;
+}
+
+li img
+{
+	border-radius: 5px;
+}
+
+.current
+{
+	background-color: #ccc;
+	margin-bottom : 0px;
+	border-radius: 5px;	
+	padding-top: 5px;
+}
+
+.current img
+{
+	display: block;
+	margin-top : 10px;
+	margin-bottom : 9px;
+	margin-left : 54px;
+	border-radius: 5px;
+	width : 65px;
+	height: 43px;
+}
+
+li
+{
+	margin : 5px;
+
+}
+
+li img
+{
+	margin-top : 10px;
+	margin-bottom : 5px;
+	border-radius: 5px;
+}
+
+button:hover
+{
+	background-color: #E6E6E6;
+}
+
+li strong:hover
+{
+	text-decoration: underline;
+}
+
+
+

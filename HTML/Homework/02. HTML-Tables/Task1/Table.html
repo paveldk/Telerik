@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>Strange table</title>	
+	<style>
+		table, td, th {
+			width:300px;
+			height:50px;
+			border-style:ridge;
+			border-width:2px;
+			border-color:gray;
+		}	
+	</style>
+</head>
+<body>
+	<table>
+		<colgroup>
+			<col/><col/><col/><col/><col/>
+		</colgroup>
+
+		<tbody>
+			<tr>
+				<th colspan="3"> Title goes here </th>
+				<th> A </th>
+				<th> B </th>
+			</tr>
+			<tr>
+				<th rowspan="3"> C </th>
+				<th> D </th>
+				<th> E </th>
+				<th> F </th>
+				<th>  G </th>
+			</tr>	
+			<tr>
+				<th> H </th>
+				<th colspan="2"> I </th>
+				<th rowspan="2"> J </th>
+			</tr>	
+			<tr>
+				<th> K </th>
+				<th> L </th>
+				<th> M </th>
+			</tr>	
+			<tr>
+				<th> N </th>
+				<th colspan="4"> O </th>
+			</tr>				
+		</tbody>
+	</table>
+</body>
+</html>

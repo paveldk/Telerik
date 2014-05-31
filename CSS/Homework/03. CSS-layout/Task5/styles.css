@@ -1,0 +1,105 @@
+/* CSS Document */
+html, body, div, fieldset, label, nav, aside, form, ul, li, input
+{
+	border: none;
+	margin: 0;
+	-ms-word-wrap: break-word;
+	padding: 0;
+	text-decoration: none;	
+	word-wrap: break-word;
+}
+
+body
+{
+	font-family: sans-serif;
+	width: 780px;
+}	
+
+nav
+{
+	text-align:center;
+	margin-top: 10px
+}
+
+aside 
+{
+	float: left;
+	width: 250px;
+	padding-top: 80px;
+	padding-left: 25px;
+	font-size: 18px;
+}
+
+input[type=range]
+{
+	width: 200px;
+	margin-bottom: 30px;	
+}
+
+ul li
+{  
+	list-style-type: none; 
+	display: inline;			
+} 
+
+fieldset
+{
+	border: 2px solid black;
+	float : left;
+	width : 44%;
+	margin : 5px;
+	padding : 5px;
+}
+
+#outerTable
+{
+	float : left;
+	border: 2px solid black;
+	width : 500px;
+}
+
+fieldset img
+{
+
+	height: 60px;
+	width: 90px;
+	margin-left
+	margin-bottom: 10px;
+}
+
+hr
+{
+	width : 750px;
+	height: 1px;
+	background-color: black;
+}
+
+label
+{
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+.laptop 
+{
+	float: left;
+	width:44%;
+	text-align:center;
+}
+
+.laptop label
+{
+	margin-top : 14px;
+}
+
+.info
+{
+	float: left;
+	width:44%;
+	margin-top: 20px;
+}
+
+legend
+{
+	text-align: center;
+}

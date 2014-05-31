@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>LinkedIn</title>	
+	<style>		
+
+	</style>
+</head>
+<body>
+	<header>
+		<h1><a href ="#"> LinkedIn </a></h1>
+		
+		<nav>
+			<ul class="disc">
+				<li> <a href ="#"> Home </a></li>
+				<li> <a href ="#"> What is LinkedIn </a> </li>
+				<li> <a href ="#"> Join Today </a> </li>
+				<li> 
+					<form name="signIn" action="signIn.php" method="post">
+					<fieldset>
+						<legend>Sign In</legend>
+						<ul class="circle">
+							<li> 
+								<label for="SIemail"> Email: </label>								
+								<input type="text" id="SIemail" /> 
+							</li>
+							<li> 
+								<label for="pass"> Password: </label>	
+								<input type="password" id="pass" />
+							</li>
+							<li> 
+								<input type="submit" value="Sign In" />
+							</li>
+						</ul>											
+				   </fieldset>
+				   </form>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	
+	<hr />
+	
+	<section>
+		<article class="entry">
+			<header class="entry-title">
+				<h1> Over 175 million professionals use LinkedIn to exchange information, ideas and opportunities </h1>
+			</header>
+			
+			<div class="entry-content">
+				<ul>
+					<li> Stay informed about your contacts and industry</li>
+					<li> Find the people & knowledge you need to achieve your goals</li>
+					<li> Control your professional identity online</li>
+				</ul>
+			</div>
+		</article>
+		
+		<div id="signUp">
+			<h2> Join LinkedIn Today </h2>
+			<form name="signUp" action="signUp.php" method="post">
+			<fieldset>
+				<legend>Sign Up</legend>
+				<ul class="disc">
+					<li> 
+						<label for="fName"> First name: </label> <br />								
+						<input type="text" id="fName" /> 
+					</li>
+					<li> 
+						<label for="lName"> Last Name: </label>	<br />	
+						<input type="text" id="lName" />
+					</li>
+					<li> 
+						<label for="SUemail"> Email: </label>	<br />	
+						<input type="email" id="SUemail" />
+					</li>
+					<li> 
+						<label for="pasw"> Password: </label>	<br />	
+						<input type="password" id="pasw" /> <br />
+						6 or more characters <br />
+					</li>						
+				</ul>
+				
+				<input type="submit" value="Join Now" /> <br /> <br />
+				Already on LinkedIn? <a href = "#"> Sign in </a>
+		   </fieldset>
+		   </form>		   
+		</div>
+		
+		<div id="search">
+			<h3> Search for someone by name: </h3>
+			<form name="search" action="search.php" method="post">
+				<ul id="disc">
+					<li> 
+						<label for="SearchfName"> First name: </label>								
+						<input type="text" id="SearchfName" placeholder="First Name" /> 
+					</li>
+					<li> 
+						<label for="searchlName"> Last Name: </label>
+						<input type="text" id="searchlName" placeholder="Last Name"/>
+					</li>					
+				</ul>
+				
+				<input type="submit" value="Go" />
+		   </form>		   
+		</div>
+	</section>
+</body>
+</html>

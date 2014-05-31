@@ -1,0 +1,22 @@
+/* CSS Document */
+body, div
+{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	border: none;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+
+div 
+{
+	background: #000000;
+	border-radius: 50px;
+	padding-right: 4%;
+}
+
+.red
+{
+	border: 1px solid #f00;
+}

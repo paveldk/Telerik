@@ -1,0 +1,59 @@
+﻿<html>
+
+<head>
+	<title>Data types and variables - Integer types</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+
+<body>
+    <h1> 
+        Write a script that finds the maximal sequence of equal elements in an numbers.
+        Example: {2, 1, 1, 2, 3, 3, 2, 2, 2, 1}  {2, 2, 2}.
+    </h1>
+
+     <div>
+        <label for = "sequence">Input sequence of numbers(separated by ','):</label>
+        <input type = "text" id = "sequence"> 
+        <button onclick="findSequence(document.getElementById('sequence').value)">Find</button>   
+    </div>
+
+
+	<div id="js-console"></div>				 
+	<script src="scripts/js-console.js"></script>
+	<script>
+		// Task3 : Write a script that finds the maximal sequence of equal elements in an numbers. Example: {2, 1, 1, 2, 3, 3, 2, 2, 2, 1}  {2, 2, 2}.
+    
+        function findSequence(sequence) {
+            var numbers = sequence.split(","),
+                count = 1, // variable for current sequence count
+                maxcount = 0, // variable for current max count
+                mostFrequent = numbers[0], // valable to kept the most frequent element, first the 0 element
+                i;
+
+            for (i = 1; i < numbers.length; i++) {
+                if (numbers[i-1]== numbers[i]) { // if previos is equal to current count++
+                    count++;              
+                }
+                else { // if not compare current count with max count
+                    if (count>maxcount) { // if current is bigger max get's it's value
+                        maxcount = count;
+                        mostFrequent = numbers[i-1]; // get's previous element, couse current isn't equal anymore
+                    }
+                    count = 1; //then current begin from 1
+                }
+            }
+
+            if (count > maxcount) { //we must check again if the sequence is to the last element
+                maxcount = count;
+                mostFrequent = numbers[numbers.length - 1];
+            }
+
+            for (i = 0; i < maxcount; i++) {
+                jsConsole.writeLine(mostFrequent);       
+            }
+        }
+	</script>
+</body>
+
+</html>

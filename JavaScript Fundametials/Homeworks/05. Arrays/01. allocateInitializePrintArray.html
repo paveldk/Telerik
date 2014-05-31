@@ -1,0 +1,36 @@
+﻿<html>
+
+<head>
+	<title>Data types and variables - Integer types</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+
+<body>
+    <h1> 
+        Write a script that allocates numberset of N integers and initializes each element by its index multiplied by 5. Print the obtained numbersay on the console. 
+    </h1>
+    <div>
+        <label for = "number">Input N:</label>
+        <input type = "text" id = "number" name = "number"> 
+        <button onclick="printNumberSet(document.getElementById('number').value)">Find</button>   
+    </div>
+
+	<div id="js-console"></div>				 
+	<script src="scripts/js-console.js"></script>
+	<script>
+		// Task 1 : Write a script that allocates numbersay of 20(I'll do it with N) integers and initializes each element by its index multiplied by 5. Print the obtained numbersay on the console.
+
+        function printNumberSet(n){
+		    var i,
+                numbers = [];
+
+            for (i = 0; i < n; i+=1) {
+                numbers[i] = i * 5;
+                jsConsole.writeLine(numbers[i]);
+            };
+        }
+	</script>
+</body>
+
+</html>

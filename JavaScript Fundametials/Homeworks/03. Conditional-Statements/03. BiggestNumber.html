@@ -1,0 +1,46 @@
+﻿<html>
+
+<head>
+	<title>Data types and variables - Integer types</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+
+<body>
+	<div id="js-console"></div>				 
+	<script src="scripts/js-console.js"></script>
+	<script>
+		// Task 3 : Write a script that finds the biggest of three integers using nested if statements.
+
+        var firstNumber = 8,
+        	secondNumber = 7,
+        	thirdNumber = 12;
+
+        jsConsole.writeLine("The numbers are: " + firstNumber + " " + secondNumber + " " + thirdNumber);
+        
+        // Not a lot to comment :)
+        if (firstNumber > secondNumber)
+        {
+            if (firstNumber > thirdNumber)
+            {
+                jsConsole.writeLine("Biggest number is: " + firstNumber);    
+            }
+            else
+            {
+                jsConsole.writeLine("Biggest number is: " + thirdNumber);  
+            }
+        }
+        else
+        {
+            if (secondNumber > thirdNumber)
+            {
+                jsConsole.writeLine("Biggest number is: " + secondNumber);
+            }
+            else
+            {
+                jsConsole.writeLine("Biggest number is: " + thirdNumber);
+            }
+        }
+	</script>
+</body>
+
+</html>

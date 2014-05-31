@@ -1,0 +1,32 @@
+﻿<html>
+
+<head>
+	<title>Data types and variables - Integer types</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+
+<body>
+    <h1> Write a script that prints all the numbers from 1 to N </h1>
+    <div>
+        <label for = "number">Input numbers</label>
+        <input type = "text" id = "number" name = "number"> 
+        <button onclick="printNumbers(document.getElementById('number').value)">Find</button>   
+    </div>
+
+	<div id="js-console"></div>				 
+	<script src="scripts/js-console.js"></script>
+	<script>
+		// Task 1 : Write a script that prints all the numbers from 1 to N
+
+        function printNumbers(n){
+		    var i;
+
+            for (i = 0; i < n; i+=1) {
+                jsConsole.writeLine(i+1);
+            };
+        }
+	</script>
+</body>
+
+</html>

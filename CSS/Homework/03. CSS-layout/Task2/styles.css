@@ -1,0 +1,77 @@
+/* CSS Document */
+html, body, section, div, h1, article, img, p, button
+{
+	border: none;
+	margin: 0;
+	-ms-word-wrap: break-word;
+	padding: 0;
+	text-decoration: none;	
+	word-wrap: break-word;
+}
+
+html
+{
+	background-color: #EEE;
+}
+
+h1
+{
+	font-size: 17px;
+	font-family: "Arial Narrow";	
+	font-weight:normal;
+}
+
+article
+{
+	background-color: #FFF;
+	border: 1px solid #A9A9A9;
+	margin-left: 10pt;
+	margin: 16px 0 16px 0;
+	padding: 8px;
+	width: 300pt;
+	height: 80pt;
+}
+
+img 
+{    
+	border: 1px solid #b3b3b3;           
+    float: left;
+    height: 70pt; 
+    margin: 0 16px 0 0;         
+}
+
+p
+{
+	font-family: "Verdana";
+    font-size: 12px;
+    margin-right: 14pt;   
+    margin-bottom: 8pt;
+}
+
+button 
+{
+	background: url('images/button.png');
+	border-color: #800;
+	color: white;
+	float : right; 
+	font-size: 0.9em;  
+    height: 22pt;
+    margin-left: 4px;   
+    margin-top: 10px;        
+    padding-left: 16px;
+}
+
+button:hover 
+{
+    cursor: pointer;
+}
+
+.add
+{
+	width : 55pt;
+}
+
+.listen
+{
+	width : 75pt;
+}

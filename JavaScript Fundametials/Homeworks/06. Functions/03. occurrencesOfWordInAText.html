@@ -1,0 +1,57 @@
+﻿<html>
+
+<head>
+	<title>Data types and variables - Integer types</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+
+<body>
+    <h1> 
+        Write a function that finds all the occurrences of word in a text
+        The search can case sensitive or case insensitive
+        Use function overloading
+    </h1>
+    <div>
+        <label for = "text">Input text:</label>
+        <textarea rows="4" cols="36" id = "text"> </textarea>
+
+        <label for = "word">Choose word:</label>
+        <input type = "text" id = "word"> 
+
+        <button onclick="findOccurrences(document.getElementById('text').value, document.getElementById('word').value, document.getElementById('case').checked)">Find</button> 
+
+        <label for = "case">Case sensitive</label>
+        <input type="checkbox" id = "case">     
+    </div>
+
+	<div id="js-console"></div>				 
+	<script src="scripts/js-console.js"></script>
+	<script>
+		// Task 3 : Write a function that finds all the occurrences of word in a text. The search can case sensitive or case insensitive. Use function overloading
+
+        function findOccurrences(text, word, checked) {          
+            var words = text.split(' '),
+                i,
+                count = 0;
+
+            if (!checked) { // Case insensitive
+                for (i = 0; i < words.length; i++) {
+                        if (words[i].toLowerCase() === word.toLowerCase()) {
+                            count++;
+                        };
+                    };    
+            } else { // Case sensitive
+                for (i = 0; i < words.length; i++) {
+                        if (words[i] === word) {
+                            count++;
+                        };
+                    };
+            }
+
+            jsConsole.writeLine('There is ' + count + ' time the word ' + word + ' in the text.');
+        }
+	</script>
+</body>
+
+</html>

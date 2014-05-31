@@ -1,0 +1,39 @@
+﻿<html>
+
+<head>
+    <title>Strings homework</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+
+<body>
+    <h1> 
+        Write a function that replaces non breaking white-spaces in a text with &amp;nbsp;
+    </h1>
+    <div>
+        <label for = "someString"> Input string: </label>
+        <input type = "text" id = "someString" class = "Task4">  
+
+        <button onclick="replaceSpaces(document.getElementById('someString').value)">Replace</button> 
+    </div>
+
+	<div id="js-console"></div>				 
+	<script src="scripts/js-console.js"></script>
+    <script src="scripts/stringFormat.js"></script>
+	<script>
+		/* Task 5. Write a function that replaces non breaking white-spaces in a text with &nbsp;
+        */
+
+        function replaceSpaces(someString) {
+            console.log(someString);
+           
+            var output = String(someString).replace(/(\s)/g, '&nbsp');
+
+            console.log(output);
+            jsConsole.writeLine(output);
+            jsConsole.writeLine('Open console to see the difference :)');
+        }
+	</script>
+</body>
+
+</html>

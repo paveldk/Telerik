@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Task two from HTML fundamentals - Nested Items</title>
+	<style>
+		ol {
+			list-style-position:inside;
+			padding-left: 17px;
+		}
+		
+		ul {
+            padding-left: 35px;
+        }
+		
+		li {
+            padding-left: 5px;
+			margin-bottom: 5px;
+        }		
+		
+		#I {
+            list-style-type: upper-roman;			
+        }
+		
+		#a {
+            list-style-type:lower-alpha;
+        }
+		
+		#disc {
+            list-style-type: disc;
+			padding-left: 22px;			
+        }
+		
+		#circle {
+            list-style-type: circle;
+			padding-left: 40px;
+        }
+ 
+        #square {
+            list-style-type: square;
+			padding-left:40px;
+        }       		
+	</style>
+</head>
+<body>
+	<section>
+		<p> Preceding Text <p>
+		<ol id = "I">
+			<li> List Item 1 
+				<ol id = "a">
+					<li> Nested Item 1.1 </li>
+					<li> Nested Item 1.2 </li>
+				</ol>
+			</li>
+			<li> List Item 2 
+				<ol>
+					<li> Nested Item 2.1 </li>
+					<li> Nested Item 2.2 
+						<ul id = "circle">
+							<li>Nested Item 2.2.1</li>
+							<li> Nested Item 2.2.2 
+								<ul id = "square">
+									<li> Nested Item 2.2.2.1 </li>
+									<li> Nested Item 2.2.2.2 </li>
+								</ul>
+							</li>
+							<li> Nested Item 2.2.3 </li>
+						</ul>
+					</li>
+					<li> Nested Item 2.3 </li>
+				</ol>
+			</li>			
+			<li> List Item 3 
+				<ul id = "disc">
+					<li> Nested Items 3.1 </li>
+					<li> Nested Items 3.2 </li>
+					<li> Nested Items 3.3 </li>
+				</ul>
+			</li>
+		</ol>
+	</section>
+</body>
+</html>
