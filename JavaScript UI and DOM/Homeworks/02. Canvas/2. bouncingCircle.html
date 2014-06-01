@@ -16,15 +16,18 @@
 			ctx = canvas.getContext("2d"),
 			x = 100,
 			y = 100,
-			r = 25,
+			r = 15,
 			width = canvas.width,
 			height = canvas.height,
-			updateX = 5,
-			updateY = 5;
+			updateX = 3,
+			updateY = 3;
 
 			function animationFrame(){
-				ctx.clearRect (0, 0 ,800 ,600);
-				ctx.fillStyle = 'red';	
+				ctx.clearRect (0, 0 ,ctx.canvas.width ,ctx.canvas.height);
+				ctx.rect(0, 0 ,ctx.canvas.width ,ctx.canvas.height);
+				ctx.fillStyle="rgb(33,108,42)";
+				ctx.fill();
+				ctx.fillStyle = '#00BEFE';	
 				ctx.strokeStyle = '#000';
 				ctx.lineWidth=2;
 
@@ -33,11 +36,11 @@
 				ctx.stroke();
 				ctx.fill();	
 
-				if ( y < 0|| y > height) {
+				if ( y < 0 + r || y > height - r) {
 					updateY = -updateY;
 				}
 				
-				if (x < 0 || x > width) {
+				if (x < 0 + r || x > width - r) {
 					updateX = -updateX;
 				}
 				
