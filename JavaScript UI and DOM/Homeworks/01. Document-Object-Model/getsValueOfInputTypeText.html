@@ -9,13 +9,16 @@
 	<div>
         <label for = "someText">Input something</label>
         <input type = "text" id = "someText" name = "number"> 
-        <button onclick="getTheValue()">Get the value</button>  
+        <button id="getTheValue">Get the value</button>  
     </div>
 
 	<div id="js-console"></div>				 
 	<script src="scripts/js-console.js"></script>
 	<script>
 		/* Task 2 : Create a function that gets the value of <input type="text"> ands prints its value to the console */
+		var getTheValueButton = document.getElementById("getTheValue");
+
+		getTheValueButton.addEventListener("click", getTheValue, false);
 
 		function getTheValue(){
 			var value = document.querySelector('input[type="text"]');

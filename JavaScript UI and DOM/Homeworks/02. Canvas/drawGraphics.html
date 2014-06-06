@@ -1,0 +1,41 @@
+﻿<html>
+
+<head>
+	<title>Draw graphics</title>
+	<link href="styles/style.css" rel="stylesheet" />
+	<script src="scripts/drawGentleman.js"></script>
+	<script src="scripts/drawBike.js"></script>
+	<script src="scripts/drawHouse.js"></script>
+</head>
+
+<body>
+    <div>
+        <button id="drawGentleman">Draw gentleman</button>  
+        <button id="drawBike">Draw bike</button>
+        <button id="drawHouse">Draw house</button>
+    </div>
+    <canvas id="the-canvas" width="800" height="600"></canvas>
+				 
+	<script>
+		// Task 1 :Draw the following graphics using canvas:
+		var canvas = document.getElementById('the-canvas'),
+			ctx = canvas.getContext('2d'),
+			drawGentlemanButton = document.getElementById("drawGentleman"),
+			drawBikeButton = document.getElementById("drawBike"),
+			drawHouseButton = document.getElementById("drawHouse");
+
+		drawGentlemanButton.addEventListener("click", function () {
+			drawGentleman(ctx);
+		}, false);
+
+		drawBikeButton.addEventListener("click", function () {
+			drawBike(ctx);
+		}, false);
+		
+		drawHouseButton.addEventListener("click", function () {
+			drawHouse(ctx)
+		}, false);
+	</script>
+</body>
+
+</html>

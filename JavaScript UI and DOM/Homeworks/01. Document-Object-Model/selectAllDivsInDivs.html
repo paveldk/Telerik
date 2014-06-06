@@ -22,12 +22,12 @@
 
 	<div>
         <label>Count with getElementsByTagName()</label>
-        <button onclick="countWithGetElements()">Count</button>  
+        <button id="countWithGetElements">Count</button>  
     </div>
 
     <div>
         <label>Count with querySelectorAll()</label>
-        <button onclick="countWithQuery()">Count</button>  
+        <button id="countWithQuery">Count</button>  
     </div>
 
 	<div id="js-console"></div>				 
@@ -36,6 +36,12 @@
 		/* Task 1 : Write a script that selects all the div nodes that are directly inside other div elements
 		Create a function using querySelectorAll()
 		Create a function using getElementsByTagName()*/
+
+		var countWithGetElementsButton = document.getElementById("countWithGetElements"),
+			countWithQueryButton = document.getElementById("countWithQuery");
+
+		countWithGetElementsButton.addEventListener("click", countWithGetElements, false);
+		countWithQueryButton.addEventListener("click", countWithQuery, false);
 
 		function countWithGetElements(){
 			var allDivs = document.getElementsByTagName('div'),

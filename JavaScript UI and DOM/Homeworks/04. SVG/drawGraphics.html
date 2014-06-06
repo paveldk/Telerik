@@ -1,0 +1,33 @@
+<html>
+
+<head>
+	<title>Draw graphics</title>
+	<link href="styles/style.css" rel="stylesheet" />
+	<script src="libs/jquery/jquery-1.10.1.min.js"></script>
+	<script src="scripts/drawMEAN.js"></script>
+	<script src="scripts/drawWindows8Screen.js"></script>
+	<script src="scripts/drawFunctions.js"></script>
+</head>
+
+<body>
+    <div>
+        <button id="meanButton">Draw MEAN</button>  
+        <button id="windowStartScreenButton">Draw Windows 8 Screen</button>
+    </div>
+    <svg id="the-svg" width="1060" height="700">
+    </svg>
+				 
+	<script>
+		var svg, svgNameSpace,
+			meanButton = document.getElementById("meanButton"),
+			windowStartScreenButton = document.getElementById("windowStartScreenButton");
+
+		svgNameSpace = 'http://www.w3.org/2000/svg';
+		svg = document.getElementById('the-svg');
+
+		meanButton.addEventListener("click", drawMEAN, false);
+		windowStartScreenButton.addEventListener("click", drawWindows8Screen, false);
+	</script>
+</body>
+
+</html>

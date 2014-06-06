@@ -9,12 +9,15 @@
 	<div>
         <label for = "someText">Choose color</label>
         <input type = "color" id = "someText" name = "number"> 
-        <button onclick="setBackground()">Set background</button>  
+        <button id="setBackground">Set background</button>  
     </div>
 		 
 	<script src="scripts/js-console.js"></script>
 	<script>
 		/* Task3 : Crеate a function that gets the value of <input type="color"> and sets the background of the body to this value */
+		var setBackgroundButton = document.getElementById("setBackground");
+
+		setBackgroundButton.addEventListener("click", setBackground, false);
 
 		function setBackground(){
 			document.body.style.background = document.querySelector('input[type="color"]').value;
