@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Raphael Demos: Setting attributes</title>
+	<link href="styles/style.css" rel="stylesheet" />
+	<script src='scripts/raphael-min.js'></script>
+	<script src="scripts/drawTelerik.js"></script>
+	<script src="scripts/drawYouTube.js"></script>
+	<script src="scripts/drawSpiral.js"></script>	
+	<script src="scripts/clear.js"></script>
+</head>
+<body>
+	<div>
+        <button id="drawTelerik">Draw Telerik</button>  
+        <button id="drawYouTube">Draw YouTube</button>
+        <button id="drawSpiral">Draw Spiral</button>
+    </div>
+	<script>
+		var paper, set,
+			drawTelerikButton = document.getElementById("drawTelerik"),
+			drawYouTubeButton = document.getElementById("drawYouTube"),
+			drawSpiralButton = document.getElementById("drawSpiral");
+	
+		paper = Raphael(0, 50, 1000, 590);
+
+		drawTelerikButton.addEventListener("click", function () {
+			drawTelerik(paper);
+		}, false);
+
+		drawYouTubeButton.addEventListener("click", function () {
+			drawYouTube(paper);
+		}, false);
+		
+		drawSpiralButton.addEventListener("click", function () {
+			drawSpiral(paper)
+		}, false)
+	</script>
+</body>
+</html>
