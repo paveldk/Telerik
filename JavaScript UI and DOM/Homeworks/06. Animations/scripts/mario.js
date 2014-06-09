@@ -48,36 +48,75 @@ function mario() {
 	      }
 	    });
 
+	    window.addEventListener('keydown', onKeyDown);
+	    var el = document.getElementsByTagName("canvas")[0];
+		el.addEventListener("touchstart", handleStart, false);
+
+	    // Moving
+	    function moveLeft() {
+			mario.setX(mario.attrs.x -= 50);
+    		mario.scaleX(-1);
+        	mario.attrs.animation = "move";
+	    }
+
+	    function moveRight() {
+	    	mario.setX(mario.attrs.x += 50);
+            mario.scaleX(1);
+            mario.attrs.animation = "move";
+	    }
+
+	    function stop (pos) {	
+	    	mario.setX(mario.attrs.x = pos);    	
+    		mario.animation('idle');
+	        mario.scaleX(1);
+	        frameCount = 0;
+	    }
+
+	    // Keyboard moving	   
 	    function onKeyDown(evt) {
 	        switch (evt.keyCode) {
 	            case 37:  
 	            	if (mario.attrs.x > 90) {
-	            		mario.setX(mario.attrs.x -= 50);
-	            		mario.scaleX(-1);
-	                	mario.attrs.animation = "move";
+	            		moveLeft();	
 	            	} else {
-	            		mario.setX(mario.attrs.x = 0);
-	            		mario.animation('idle');
-				        mario.scaleX(1);
-				        frameCount = 0;
+	            		stop(0);	
 	            	}               
 	                break;
 	            case 39: 
 	           		if (mario.attrs.x < document.getElementsByTagName('canvas')[0].width - 80) { 
-		                mario.setX(mario.attrs.x += 50);
-		                mario.scaleX(1);
-		                mario.attrs.animation = "move";
+		                moveRight();
 		            } else {
-	            		mario.setX(mario.attrs.x = document.getElementsByTagName('canvas')[0].width - 80);
-	            		mario.animation('idle');
-				        mario.scaleX(1);
-				        frameCount = 0;
+	            		stop(document.getElementsByTagName('canvas')[0].width - 80);
 	            	}
 	                break;
 	        }
 	    }
 
-	    window.addEventListener('keydown', onKeyDown);
+	    // Mouse moving
+
+		$('canvas').click(function (evt){
+			move(evt);	
+	    });
+
+	    // Touch moving   
+		function handleStart(evt) {
+			move(evt)
+		}
+
+		function move(evt) {
+			var timeout = $(this).data("timeout");
+			if(timeout) clearTimeout(timeout);
+	        $(this).data('timeout', window.setInterval(function () {
+	        	if (Math.abs(evt.clientX - mario.attrs.x) > 30) {
+	        		if (mario.attrs.x > evt.clientX) {
+						moveLeft();			
+					} else {
+						moveRight();
+					} 	
+	        	} 
+        	}, 100));
+		}
+
 	};  
 
 	imageObj.src = 'images/sprite.png';  
