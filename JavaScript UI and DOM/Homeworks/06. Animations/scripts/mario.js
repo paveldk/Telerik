@@ -93,7 +93,6 @@ function mario() {
 	    }
 
 	    // Mouse moving
-
 		$('canvas').click(function (evt){
 			move(evt);	
 	    });
