@@ -1,0 +1,19 @@
+fieldset, select {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    height: 100%;
+    text-align: center;
+}
+
+select {
+	width : 100%;
+}
+
+div {
+	margin-bottom: 10px;
+}
+
+button {
+	width : 100px;
+}
+
