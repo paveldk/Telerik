@@ -47,15 +47,10 @@ window.onload = function (){
 	AddSlide("<h1> Header test </h1>");
 	AddSlide("<image src='images/next.png'>");
 
-	slider.append(slides).children().hide().css({
-		'text-align' : 'center'
-	});;
+	slider.append(slides).children().hide();
 
 	slider.css({
-		'margin-left' : 'auto',
-		'margin-right' : 'auto',
-		'margin-top' : height / 2 - 30,
-		'width' : "20%"
+		'margin-top' : height / 2 - 60
 	});
 
 	current = slider.children().first();
@@ -78,6 +73,16 @@ window.onload = function (){
 
 	function NextClick() {
 		current.hide();
+		if (current.next().is('IMG')) {
+			slider.css({
+				'margin-top' : (height - current.next().height()) / 2
+			});
+		}
+		else {
+			slider.css({
+				'margin-top' : height / 2 - 60
+			});
+		}
 		if (currentElement < slides.length - 1) {			
 			current = current.next().show();
 			currentElement++;
