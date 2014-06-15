@@ -1,0 +1,32 @@
+/* CSS Document */
+html, body
+{
+	border: none;
+	margin: 0;
+	-ms-word-wrap: break-word;
+	padding: 0;
+	text-decoration: none;	
+	word-wrap: break-word;
+}
+
+#lectures-containter, #students-table, #studentsTableAsDiv-template{
+    border-collapse: collapse;
+}
+
+#students-table, #studentsTableAsDiv-template{
+	margin-bottom: 10px;
+	margin-left: 20px;
+}
+
+#lectures-containter, #lectures-containter th, #lectures-containter td, #students-table th, #students-table td, #studentsTableAsDiv-template th, #studentsTableAsDiv-template td{
+	border : 1px solid black;
+}
+
+#studentsTableAsDiv-template th,  #students-table th, #lectures-containter th{
+    background-color: #A6A6A6;
+    color:  #FFF;
+}
+
+#lectures-containter tr:nth-child(even),  #studentsTableAsDiv-template tr:nth-child(even), #students-table tr:nth-child(even){
+	background-color: #D9D9D9;
+}

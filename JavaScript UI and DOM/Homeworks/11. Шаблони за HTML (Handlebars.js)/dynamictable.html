@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dynamic Table</title>
+	<link href="styles/style.css" rel="stylesheet" />
+	<script src="libs/jquery/jquery-1.10.1.min.js"></script>
+	<script src='scripts/dynamicTable.js'></script>
+	<script src='libs/handlebars.min.js'></script>
+</head>
+<body>
+	<table id = "lectures-containter">
+	</table>
+	<script id="lectures-template" type="text/x-handlebars-template">
+		<table class="lectures-list">
+			<tr class = "header-row">
+				<th>№</th>
+				<th>Title</th>
+				<th>Date#1</th>
+				<th>Date#2</th>
+			</tr>		
+			{{#each lectures}}	
+			<tr class = "lectures-item">
+				<td>
+					{{number}}
+				</td>
+				<td>
+					{{name}}
+				</td>
+				<td>
+					{{firstDate}}
+				</td>
+				<td>
+					{{secondDate}}
+				</td>				
+			</tr>
+			{{/each}}			
+		</select>
+	</script>
+</body>
+</html>

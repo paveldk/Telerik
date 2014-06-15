@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>List view</title>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0/handlebars.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <link href="styles/style.css" rel="stylesheet" />
+</head>
+<body>
+    <ul id="books-list" data-template="book-item-template"></ul>
+
+    <div id="students-table-wrapper">
+        <table id="students-table">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Mark</th>
+            </tr>
+            </thead>
+            <tbody id="studentsTable" data-template="students-row-template"></tbody>
+        </table>
+    </div>
+
+    <div id="studentsTableAsDiv" data-template="students-table-template"></div>
+
+    <script id="book-item-template" type="text/x-handlebars-template">
+        {{#each books}}
+        <li class="book-item">
+            <a href="/#books/{{id}}">
+                <strong>{{title}}</strong>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+
+    <script id="students-row-template" type="text/x-handlebars-template">
+        {{#each students}}
+        <tr class="student-row">
+            <td>{{math @index "+" 1}}</td>
+            <td>{{name}}</td>
+            <td>{{mark}}</td>
+        </tr>
+        {{/each}}
+    </script>
+
+    <script id="students-table-template" type="text/x-handlebars-template">
+        <table id="studentsTableAsDiv-template">
+            <thead>
+            <tr>
+                <th>#</td>
+                <th>Name</td>
+                <th>Mark</td>
+            </tr>
+            </thead>
+
+            <tbody>
+            {{#each students}}
+            <tr>
+                <td>{{math @index "+" 1}}</td>
+                <td>{{name}}</td>
+                <td>{{mark}}</td>
+            </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </script>
+    <script src="scripts/listView.js"></script>
+</body>
+</html>
