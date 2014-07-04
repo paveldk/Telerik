@@ -3,66 +3,54 @@ define(['./student'], function (Student) {
 	var Course;
 	Course = (function() {
 		function Course(title, formula) {
-			var students = [];
+			this.title = title;
+			this._students = [];
+			this._formula = formula;
+		}
 
-			this._title = title;
+		Course.prototype.addStudent = function(student) {
+			var totalScore = this._formula(student);
 
-			Course.prototype.addStudent = function(student) {
-				if (student instanceof Student) {
-					students.push(student)
-				} else {
-					throw new Error("Error");
-				}
-			}	
+			this._students.push({ 
+				student: student,
+				totalScore: totalScore
+			});
+		}	
 
-			Course.prototype.calculateResults = function() {
-				for (var i = 0, len = students.length; i < len; i++) {
-					var result = formula(students[i]);
-					console.log(result);
-				};			
-			}
+		Course.prototype.calculateResults = function() {
+			var students = this._students;
 
-			Course.prototype.getTopStudentsByExam = function(count) {
-				console.log("Top " + count + " students by exam:");
-				students.sort(examCompare);
+			for (var i = 0, len = students.length; i < len; i++) {
+				console.log(students[i].student.name + " " + students[i].totalScore);
+			};			
+		}
 
-				for (var i = 0; i < count; i++) {
-					console.log(students[i].name + " " + students[i].exam);
-				};
-			}
+		Course.prototype.getTopStudentsByExam = function(count) {
+			var sortedStudents = this._students.sort(examCompare);
 
-			Course.prototype.getTopStudentsByTotalScore = function(count) {
-				console.log("Top " + count + " students by total score:");
-				students.sort(totalScoreCompare);
+			console.log("Top " + count + " students by exam:");
+			
+			for (var i = 0; i < count; i++) {
+				console.log(sortedStudents[i].student.name + " " + sortedStudents[i].student.exam);
+			};
+		}
 
-				for (var i = 0; i < count; i++) {
-					console.log(students[i].name + " " + formula(students[i]));
-				};
-			}
+		Course.prototype.getTopStudentsByTotalScore = function(count) {
+			var sortedStudents = this._students.sort(totalScoreCompare);
 
-			function examCompare(a,b) {
-				if (a.exam < b.exam) {
-					return 1;
-				}
-					
-				if (a.exam > b.exam) {
-					return -1;
-				}
+			console.log("Top " + count + " students by total score:");
 
-				return 0;
-			}
+			for (var i = 0; i < count; i++) {
+				console.log(sortedStudents[i].student.name + " " + sortedStudents[i].totalScore);
+			};
+		}
 
-			function totalScoreCompare(a,b) {
-				if (formula(a) < formula(b)) {
-					return 1;
-				}
-					
-				if (formula(a) > formula(b)) {
-					return -1;
-				}
+		function examCompare(a, b) {
+			return b.student.exam - a.student.exam;
+		}
 
-				return 0;
-			}
+		function totalScoreCompare(a,b) {
+			return b.totalScore - a.totalScore;
 		}
 
 		return Course;
