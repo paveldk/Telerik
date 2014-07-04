@@ -7,7 +7,7 @@ define(['./student'], function (Student) {
 
 			this._title = title;
 
-			this.addStudent = function(student) {
+			Course.prototype.addStudent = function(student) {
 				if (student instanceof Student) {
 					students.push(student)
 				} else {
@@ -15,14 +15,14 @@ define(['./student'], function (Student) {
 				}
 			}	
 
-			this.calculateResults = function() {
+			Course.prototype.calculateResults = function() {
 				for (var i = 0, len = students.length; i < len; i++) {
 					var result = formula(students[i]);
 					console.log(result);
 				};			
 			}
 
-			this.getTopStudentsByExam = function(count) {
+			Course.prototype.getTopStudentsByExam = function(count) {
 				console.log("Top " + count + "students by exam:");
 				students.sort(examCompare);
 
@@ -31,7 +31,7 @@ define(['./student'], function (Student) {
 				};
 			}
 
-			this.getTopStudentsByTotalScore = function(count) {
+			Course.prototype.getTopStudentsByTotalScore = function(count) {
 				console.log("Top " + count + "students by total score:");
 				students.sort(totalScoreCompare);
 
