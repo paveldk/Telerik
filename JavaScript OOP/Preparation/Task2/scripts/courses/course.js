@@ -23,7 +23,7 @@ define(['./student'], function (Student) {
 			}
 
 			Course.prototype.getTopStudentsByExam = function(count) {
-				console.log("Top " + count + "students by exam:");
+				console.log("Top " + count + " students by exam:");
 				students.sort(examCompare);
 
 				for (var i = 0; i < count; i++) {
@@ -32,7 +32,7 @@ define(['./student'], function (Student) {
 			}
 
 			Course.prototype.getTopStudentsByTotalScore = function(count) {
-				console.log("Top " + count + "students by total score:");
+				console.log("Top " + count + " students by total score:");
 				students.sort(totalScoreCompare);
 
 				for (var i = 0; i < count; i++) {
@@ -63,8 +63,6 @@ define(['./student'], function (Student) {
 
 				return 0;
 			}
-
-
 		}
 
 		return Course;
