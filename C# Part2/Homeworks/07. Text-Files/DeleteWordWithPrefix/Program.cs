@@ -1,4 +1,4 @@
-﻿namespace DeleteWordWithPrefix
+namespace DeleteWordWithPrefix
 {
     using System;
     using System.IO;

@@ -1,4 +1,4 @@
-﻿namespace FurnitureManufacturer.Engine.Factories
+namespace FurnitureManufacturer.Engine.Factories
 {
     using Interfaces;
     using Interfaces.Engine;

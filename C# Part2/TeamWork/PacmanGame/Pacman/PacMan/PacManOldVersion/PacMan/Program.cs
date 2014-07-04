@@ -1,4 +1,4 @@
-﻿namespace PacmanGame
+namespace PacmanGame
 {  
     using System;
     using System.Collections.Generic;

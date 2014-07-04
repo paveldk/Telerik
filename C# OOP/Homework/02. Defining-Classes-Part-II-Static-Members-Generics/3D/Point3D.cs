@@ -1,4 +1,4 @@
-﻿namespace _3D
+namespace _3D
 {
     using System;
     using System.Text;

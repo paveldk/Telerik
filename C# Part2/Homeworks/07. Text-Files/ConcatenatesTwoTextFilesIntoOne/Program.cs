@@ -1,4 +1,4 @@
-﻿// Write a program that concatenates two text files into another text file.
+// Write a program that concatenates two text files into another text file.
 namespace ConcatenatesTwoTextFilesIntoOne
 {
     using System;

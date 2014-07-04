@@ -1,4 +1,4 @@
-﻿namespace EncodeAndEncrypt
+namespace EncodeAndEncrypt
 {
     using System;
     using System.Text;

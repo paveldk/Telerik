@@ -1,4 +1,4 @@
-﻿/** Write a program that sorts an array of integers using the merge sort algorithm (find it in Wikipedia).
+/** Write a program that sorts an array of integers using the merge sort algorithm (find it in Wikipedia).
  * The idea of the sort is to repeatedly merge sublists to produce new sorted sublists. Once they're all sorted we have one final sorted array.
 */
 using System;

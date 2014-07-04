@@ -1,4 +1,4 @@
-﻿namespace FurnitureManufacturer.Interfaces
+namespace FurnitureManufacturer.Interfaces
 {
     using System.Collections.Generic;
 

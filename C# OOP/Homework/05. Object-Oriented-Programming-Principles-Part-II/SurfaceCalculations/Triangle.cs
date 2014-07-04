@@ -1,4 +1,4 @@
-﻿namespace SurfaceCalculations
+namespace SurfaceCalculations
 {
     using System;
 

@@ -1,4 +1,4 @@
-﻿namespace FurnitureManufacturer
+namespace FurnitureManufacturer
 {
     using Engine;
 

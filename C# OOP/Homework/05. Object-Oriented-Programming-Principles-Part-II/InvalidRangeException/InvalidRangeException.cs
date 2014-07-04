@@ -1,4 +1,4 @@
-﻿namespace CustomExceptions
+namespace CustomExceptions
 {
     using System;
     

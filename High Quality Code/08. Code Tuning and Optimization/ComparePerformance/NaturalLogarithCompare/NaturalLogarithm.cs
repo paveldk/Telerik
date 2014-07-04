@@ -1,4 +1,4 @@
-﻿/* Task 3 : Write a program to compare the performance of square root, NATURAL LOGARITHM, 
+/* Task 3 : Write a program to compare the performance of square root, NATURAL LOGARITHM, 
  * sinus for float, double and decimal values.
  * */
 namespace NaturalLogarithmCompare

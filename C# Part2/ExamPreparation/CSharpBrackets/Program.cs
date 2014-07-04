@@ -1,4 +1,4 @@
-﻿namespace CSharpBrackets
+namespace CSharpBrackets
 {
     using System;
     using System.Collections.Generic;

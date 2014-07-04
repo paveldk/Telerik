@@ -1,4 +1,4 @@
-﻿// Refactor the following loop: 
+// Refactor the following loop: 
 namespace TaskThree
 {
     using System;

@@ -1,4 +1,4 @@
-﻿namespace Task4
+namespace Task4
 {
     using System;
     using System.Collections.Generic;

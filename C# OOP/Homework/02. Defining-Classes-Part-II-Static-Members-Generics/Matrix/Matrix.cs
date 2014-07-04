@@ -1,4 +1,4 @@
-﻿namespace Matrix
+namespace Matrix
 {
     using System;
     using System.Collections.Generic;

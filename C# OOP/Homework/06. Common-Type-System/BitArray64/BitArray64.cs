@@ -1,4 +1,4 @@
-﻿namespace BitArray64
+namespace BitArray64
 {
     using System;
     using System.Collections.Generic;

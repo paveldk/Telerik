@@ -1,4 +1,4 @@
-﻿/* Task 3 : Write a program to compare the performance of square root, natural logarithm, 
+/* Task 3 : Write a program to compare the performance of square root, natural logarithm, 
  * SINUS for float, double and decimal values.
  * 
  * Same here, again Decimal 2 times slower

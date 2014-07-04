@@ -1,4 +1,4 @@
-﻿/*Write a program that compares two char arrays lexicographically (letter by letter).
+/*Write a program that compares two char arrays lexicographically (letter by letter).
  * Becouse it's pretty much the same like the Task 2, gonna make it how it's in the Nakov's book - to print which array is first Lexicographically - the array, whose element is smaller (comes earlier in the alphabet), comes first.
  **/
 using System;

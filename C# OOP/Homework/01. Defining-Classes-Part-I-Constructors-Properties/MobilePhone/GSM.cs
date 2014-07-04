@@ -1,4 +1,4 @@
-﻿namespace MobilePhone
+namespace MobilePhone
 {
     using System;
     using System.Collections.Generic;

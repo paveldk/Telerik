@@ -1,4 +1,4 @@
-﻿namespace Console_Justification
+namespace Console_Justification
 {
     using System;
     using System.Collections.Generic;

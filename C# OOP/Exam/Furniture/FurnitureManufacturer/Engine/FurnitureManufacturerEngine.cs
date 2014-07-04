@@ -1,4 +1,4 @@
-﻿namespace FurnitureManufacturer.Engine
+namespace FurnitureManufacturer.Engine
 {
     using System.Collections.Generic;
 

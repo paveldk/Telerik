@@ -1,4 +1,4 @@
-﻿// Task 2 : Refactor the following examples to produce code with well-named identifiers in C#:
+// Task 2 : Refactor the following examples to produce code with well-named identifiers in C#:
 namespace RefactorHumanClass
 {
     using System;

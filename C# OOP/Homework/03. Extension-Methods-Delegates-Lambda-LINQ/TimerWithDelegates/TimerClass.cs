@@ -1,4 +1,4 @@
-﻿namespace TimerWithDelegates
+namespace TimerWithDelegates
 {
     using System;
     using System.Diagnostics;

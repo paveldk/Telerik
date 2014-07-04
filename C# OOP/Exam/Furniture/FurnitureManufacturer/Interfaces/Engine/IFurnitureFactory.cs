@@ -1,4 +1,4 @@
-﻿namespace FurnitureManufacturer.Interfaces.Engine
+namespace FurnitureManufacturer.Interfaces.Engine
 {
     public interface IFurnitureFactory
     {

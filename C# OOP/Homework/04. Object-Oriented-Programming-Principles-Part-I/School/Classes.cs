@@ -1,4 +1,4 @@
-﻿namespace School
+namespace School
 {
     using System;
     using System.Collections.Generic;

@@ -1,4 +1,4 @@
-﻿namespace Generic
+namespace Generic
 {
     using System;
     using System.Collections.Generic;

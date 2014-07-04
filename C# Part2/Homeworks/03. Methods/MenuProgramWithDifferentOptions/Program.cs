@@ -1,4 +1,4 @@
-﻿/*Write a program that can solve these tasks:
+/*Write a program that can solve these tasks:
  *      Reverses the digits of a number
  *      Calculates the average of a sequence of integers
  *      Solves a linear equation a * x + b = 0

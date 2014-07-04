@@ -1,4 +1,4 @@
-﻿/* Define a class InvalidRangeException<T> that holds information about an error condition 
+/* Define a class InvalidRangeException<T> that holds information about an error condition 
  * related to invalid range. It should hold error message and a range definition [start … 
  * end].
  * Write a sample application that demonstrates the InvalidRangeException<int> 

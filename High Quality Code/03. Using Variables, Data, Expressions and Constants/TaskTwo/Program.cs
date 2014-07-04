@@ -1,4 +1,4 @@
-﻿// Refactor the following code to apply variable usage and naming best practices:
+// Refactor the following code to apply variable usage and naming best practices:
 namespace TaskTwo
 {
     using System;

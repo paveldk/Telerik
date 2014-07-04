@@ -1,4 +1,4 @@
-﻿namespace DecodeAndDecrypt
+namespace DecodeAndDecrypt
 {
     using System;
     using System.Text;

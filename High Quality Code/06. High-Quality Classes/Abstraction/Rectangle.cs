@@ -1,4 +1,4 @@
-﻿namespace Abstraction
+namespace Abstraction
 {
     class Rectangle : Figure
     {

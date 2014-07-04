@@ -1,4 +1,4 @@
-﻿namespace Telerik.ILS.Common
+namespace Telerik.ILS.Common
 {
     using System;
     using System.Collections.Generic;

@@ -1,4 +1,4 @@
-﻿// Refactor the following code to use proper variable naming and simplified expressions:
+// Refactor the following code to use proper variable naming and simplified expressions:
 namespace TaskOne
 {
     using System;

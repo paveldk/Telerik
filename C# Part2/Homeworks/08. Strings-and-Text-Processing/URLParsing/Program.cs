@@ -1,4 +1,4 @@
-﻿/* Write a program that parses an URL address given in the format:
+/* Write a program that parses an URL address given in the format:
  * [protocol]://[server]/[resource]
  * and extracts from it the [protocol], [server] and [resource] elements. For example from the URL http://www.devbg.org/forum/index.php the following information should be extracted:
  * [protocol] = "http"

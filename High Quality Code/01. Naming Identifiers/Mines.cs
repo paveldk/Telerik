@@ -1,4 +1,4 @@
-﻿/* Refactor and improve the naming in the C# source project “3. 
+/* Refactor and improve the naming in the C# source project “3. 
  * Naming-Identifiers-Homework.zip”. You are allowed to make other improvements in the
  * code as well (not only naming) as well as to fix bugs.
  * */

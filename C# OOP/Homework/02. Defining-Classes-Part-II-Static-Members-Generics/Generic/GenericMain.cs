@@ -1,4 +1,4 @@
-﻿// The task condition is in the file TaskCondition.docx
+// The task condition is in the file TaskCondition.docx
 namespace Generic
 {
     using System;

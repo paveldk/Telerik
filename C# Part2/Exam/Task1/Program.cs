@@ -1,4 +1,4 @@
-﻿namespace Task1
+namespace Task1
 {
     using System;
     using System.Collections.Generic;

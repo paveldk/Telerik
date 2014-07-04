@@ -1,4 +1,4 @@
-﻿namespace WarMachines
+namespace WarMachines
 {
     using WarMachines.Engine;
 

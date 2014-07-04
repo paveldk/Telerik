@@ -1,4 +1,4 @@
-﻿namespace Students
+namespace Students
 {
     using System;
     using System.Collections.Generic;

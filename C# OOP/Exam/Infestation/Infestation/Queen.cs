@@ -1,4 +1,4 @@
-﻿namespace Infestation
+namespace Infestation
 {
     using System;
     using System.Collections.Generic;

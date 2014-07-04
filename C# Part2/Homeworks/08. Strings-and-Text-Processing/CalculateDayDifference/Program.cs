@@ -1,4 +1,4 @@
-﻿/* Write a program that reads two dates in the format: day.month.year and calculates the 
+/* Write a program that reads two dates in the format: day.month.year and calculates the 
  * number of days between them. Example:
  * Enter the first date: 27.02.2006
  * Enter the second date: 3.03.2004

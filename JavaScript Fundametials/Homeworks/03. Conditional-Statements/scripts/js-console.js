@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
 	function createJsConsole(selector) {
 		var self = this;
 		var consoleElement = document.querySelector(selector);

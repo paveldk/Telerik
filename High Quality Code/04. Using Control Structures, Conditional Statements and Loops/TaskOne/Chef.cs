@@ -1,4 +1,4 @@
-﻿// Refactor the following class using best practices for organizing straight-line code:
+// Refactor the following class using best practices for organizing straight-line code:
 namespace TaskOne
 {
     using System;

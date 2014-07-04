@@ -1,4 +1,4 @@
-﻿/* Task 2 : Write a program to compare the performance of add, substract, increment, MULTIPLY, 
+/* Task 2 : Write a program to compare the performance of add, substract, increment, MULTIPLY, 
  * divide for int, long, float, double and decimal values.
  * */
 namespace MultiplyCompare

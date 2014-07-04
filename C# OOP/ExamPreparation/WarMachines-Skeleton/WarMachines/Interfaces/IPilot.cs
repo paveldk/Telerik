@@ -1,4 +1,4 @@
-﻿namespace WarMachines.Interfaces
+namespace WarMachines.Interfaces
 {
     public interface IPilot
     {

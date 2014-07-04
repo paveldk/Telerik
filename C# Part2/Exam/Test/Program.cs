@@ -1,4 +1,4 @@
-﻿namespace _03_Digits
+namespace _03_Digits
 {
     using System;
     class Digits

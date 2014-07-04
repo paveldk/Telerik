@@ -1,4 +1,4 @@
-﻿namespace VersionTask
+namespace VersionTask
 {
     using System;
     using System.Runtime.InteropServices;

@@ -1,4 +1,4 @@
-﻿// Refactor the following if statements: 
+// Refactor the following if statements: 
 namespace TaskTwo
 {
     using System;

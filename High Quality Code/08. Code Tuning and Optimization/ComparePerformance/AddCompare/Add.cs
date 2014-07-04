@@ -1,4 +1,4 @@
-﻿/* Task 1 : Write a program to compare the performance of ADD, subtract, increment, multiply, 
+/* Task 1 : Write a program to compare the performance of ADD, subtract, increment, multiply, 
  * divide for int, long, float, double and decimal values.
  * */
 

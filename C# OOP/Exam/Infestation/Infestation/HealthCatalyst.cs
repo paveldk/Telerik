@@ -1,4 +1,4 @@
-﻿namespace Infestation
+namespace Infestation
 {
     class HealthCatalyst : ISupplement
     {

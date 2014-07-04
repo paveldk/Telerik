@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
 	$.fn.tabStrip = function () {
 		var selector = this.selector;
 

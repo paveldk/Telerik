@@ -1,4 +1,4 @@
-﻿namespace DocumentSystem.Documents
+namespace DocumentSystem.Documents
 {
     using System;
     using System.Collections.Generic;

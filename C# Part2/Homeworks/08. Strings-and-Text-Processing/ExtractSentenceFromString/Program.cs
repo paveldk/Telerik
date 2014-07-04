@@ -1,4 +1,4 @@
-﻿/*Write a program that extracts from a given text all sentences containing given word.
+/*Write a program that extracts from a given text all sentences containing given word.
  * Example: The word is "in". The text is:
  * We are living in a yellow submarine. We don't have anything else. 
  * Inside the submarine is very tight. So we are drinking all the day. 

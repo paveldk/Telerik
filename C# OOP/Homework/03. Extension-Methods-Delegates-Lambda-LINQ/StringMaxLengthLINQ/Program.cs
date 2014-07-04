@@ -1,4 +1,4 @@
-﻿/* Write a program to return the string with maximum length from an array of strings. 
+/* Write a program to return the string with maximum length from an array of strings. 
  * Use LINQ
  * */
 namespace StringMaxLengthLINQ

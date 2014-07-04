@@ -1,4 +1,4 @@
-﻿// Using delegates write a class Timer that has can execute certain method at each t seconds
+// Using delegates write a class Timer that has can execute certain method at each t seconds
 namespace TimerWithDelegates
 {
     class Test

@@ -1,4 +1,4 @@
-﻿namespace FurnitureManufacturer.Interfaces
+namespace FurnitureManufacturer.Interfaces
 {
     public interface IAdjustableChair : IChair
     {

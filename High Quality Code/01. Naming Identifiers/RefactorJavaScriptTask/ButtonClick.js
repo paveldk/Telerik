@@ -1,4 +1,4 @@
-﻿// Refactor the following examples to produce code with well-named identifiers in JavaScript
+// Refactor the following examples to produce code with well-named identifiers in JavaScript
 
 function buttonOnClick(event, arguments) {
     var myWindow = window,

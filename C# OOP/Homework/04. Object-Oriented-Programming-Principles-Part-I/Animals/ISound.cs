@@ -1,4 +1,4 @@
-﻿namespace Animals
+namespace Animals
 {
     public interface ISound
     { 

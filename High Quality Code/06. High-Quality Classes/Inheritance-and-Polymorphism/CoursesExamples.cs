@@ -1,4 +1,4 @@
-﻿namespace InheritanceAndPolymorphism
+namespace InheritanceAndPolymorphism
 {
     using System;
     using System.Collections.Generic;

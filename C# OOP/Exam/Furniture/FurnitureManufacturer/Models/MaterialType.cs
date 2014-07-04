@@ -1,4 +1,4 @@
-﻿namespace FurnitureManufacturer.Models
+namespace FurnitureManufacturer.Models
 {
     public enum MaterialType
     {

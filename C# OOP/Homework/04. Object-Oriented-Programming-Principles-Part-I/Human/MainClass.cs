@@ -1,4 +1,4 @@
-﻿/* Define abstract class Human with first name and last name. Define new class Student 
+/* Define abstract class Human with first name and last name. Define new class Student 
  * which is derived from Human and has new field – grade. Define class Worker derived 
  * from Human with new property WeekSalary and WorkHoursPerDay and method MoneyPerHour() 
  * that returns money earned by hour by the worker. Define the proper constructors and 

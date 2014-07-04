@@ -1,4 +1,4 @@
-﻿namespace GeometryAPI
+namespace GeometryAPI
 {
     using System;
     using System.Collections.Generic;

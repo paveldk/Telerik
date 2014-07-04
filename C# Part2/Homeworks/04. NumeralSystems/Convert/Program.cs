@@ -1,4 +1,4 @@
-﻿/* 1. Write a program to convert decimal numbers to their binary representation.
+/* 1. Write a program to convert decimal numbers to their binary representation.
  * 2. Write a program to convert binary numbers to their decimal representation.
  * 3. Write a program to convert decimal numbers to their hexadecimal representation.
  * 4. Write a program to convert hexadecimal numbers to their decimal representation.

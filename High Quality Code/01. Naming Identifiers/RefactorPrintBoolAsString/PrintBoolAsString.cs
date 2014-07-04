@@ -1,4 +1,4 @@
-﻿// Task 1. Refactor the following examples to produce code with well-named C# identifiers:
+// Task 1. Refactor the following examples to produce code with well-named C# identifiers:
 
 using System;
 

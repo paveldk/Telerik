@@ -1,4 +1,4 @@
-﻿/* Task 2 : Write a program to compare the performance of add, substract, increment, multiply, 
+/* Task 2 : Write a program to compare the performance of add, substract, increment, multiply, 
  * DIVIDE for int, long, float, double and decimal values.
  * 
  * General conclusion : Decimal is VERRYYYY SLOW :)

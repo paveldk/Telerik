@@ -1,4 +1,4 @@
-﻿namespace WarMachines.Engine
+namespace WarMachines.Engine
 {
     using System.Collections.Generic;
     using WarMachines.Interfaces;

@@ -1,4 +1,4 @@
-﻿namespace WarMachines.Machines
+namespace WarMachines.Machines
 {
     using System;
     using Interfaces;

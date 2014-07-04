@@ -1,4 +1,4 @@
-﻿/* Write a method that adds two polynomials. Represent them as arrays of their coefficients as in the example below:
+/* Write a method that adds two polynomials. Represent them as arrays of their coefficients as in the example below:
  * x2 + 5 = 1x2 + 0x + 5 
  * Extend the program to support also subtraction and multiplication of polynomials.
  * Both 11 and 12 in one task.

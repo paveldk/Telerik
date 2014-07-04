@@ -1,4 +1,4 @@
-﻿namespace CohesionAndCoupling
+namespace CohesionAndCoupling
 {
     using System;
 

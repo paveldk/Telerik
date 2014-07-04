@@ -1,4 +1,4 @@
-﻿// Modify the solution of the previous problem to replace only whole words (not substrings).
+// Modify the solution of the previous problem to replace only whole words (not substrings).
 namespace ReplaceText
 {
     using System;
