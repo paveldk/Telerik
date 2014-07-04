@@ -1,4 +1,4 @@
-define(['./student'], function (Student) {
+define(function () {
 	'use strict';
 	var Course;
 	Course = (function() {
