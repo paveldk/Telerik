@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Console module</title>
+	<script src='scripts/consoleModule.js'></script>
+</head>
+<body>
+	<div>
+        <button id="writeLineButton">Write line</button>  
+        <button id="writeFormatLineButton">Write format line</button>
+        <button id="writeErrorButton">Write error</button>
+        <button id="writeFormatErrorButton">Write format error</button>
+        <button id="writeWarningButton">Write warning</button>
+        <button id="writeFormatWarningButton">Write format warning</button
+    </div>
+
+	<script>
+		var writeLineButton = document.getElementById("writeLineButton"),
+			writeFormatLineButton = document.getElementById("writeFormatLineButton"),
+			writeErrorButton = document.getElementById("writeErrorButton"),
+			writeFormatErrorButton = document.getElementById("writeFormatErrorButton"),
+			writeWarningButton = document.getElementById("writeWarningButton"),
+			writeFormatWarningButton = document.getElementById("writeFormatWarningButton");
+
+
+		// some examples, you can check your owns ofcourse :)
+		writeLineButton.addEventListener("click", function () {
+			specialConsole.writeLine("Message: hello");
+		}, false);	
+
+		writeErrorButton.addEventListener("click", function () {
+			specialConsole.writeError("Error: Something happened");
+		}, false);	
+
+		writeWarningButton.addEventListener("click", function () {
+			specialConsole.writeWarning("Warning: A warning");
+		}, false);	
+
+		writeFormatLineButton.addEventListener("click", function () {
+			specialConsole.writeLine("Message: {0}", "hello");
+		}, false);	
+
+		writeFormatErrorButton.addEventListener("click", function () {
+			specialConsole.writeError("Error: {0}", "Something happened");
+		}, false);	
+
+		writeFormatWarningButton.addEventListener("click", function () {
+			specialConsole.writeWarning("Warning: {0}", "A warning");
+		}, false);	
+	</script>
+</body>
+</html>

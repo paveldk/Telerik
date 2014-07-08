@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM module</title>
+	<script src='scripts/shapesDrawing.js'></script>
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+<body>
+	<div>
+		<label for = "x">X:</label>
+        <input type = "text" id = "x"> 
+        <label for = "y">Y:</label>
+        <input type = "text" id = "y"> 
+        <label for = "width">Width:</label>
+        <input type = "text" id = "width"> 
+        <label for = "height">Height:</label>
+        <input type = "text" id = "height"> 
+        <button id="drawRect">Rectangle</button>    
+    </div>
+    <div>
+    	<label for = "xc">X:</label>
+        <input type = "text" id = "xc"> 
+        <label for = "yc">Y:</label>
+        <input type = "text" id = "yc"> 
+        <label for = "r">R:</label>
+        <input type = "text" id = "r"> 
+    	<button id="drawCircle">Circle</button>    
+    </div>
+    <div>
+		<label for = "x1">X1:</label>
+        <input type = "text" id = "x1"> 
+        <label for = "y1">Y1:</label>
+        <input type = "text" id = "y1"> 
+        <label for = "x2">X2:</label>
+        <input type = "text" id = "x2"> 
+        <label for = "y2">Y2:</label>
+        <input type = "text" id = "y2"> 
+        <button id="drawLine">Line</button>    
+    </div>
+           
+    <canvas id="the-canvas" width="800" height="500">
+    	Browser dosent support canvas
+    </canvas>
+
+	<script>
+		var drawRect = document.getElementById("drawRect"),
+			drawCircle = document.getElementById("drawCircle"),
+			drawLine = document.getElementById("drawLine"),
+			drawRender = new draw("the-canvas");
+
+		drawRect.addEventListener("click", function () {
+			var x = document.getElementById("x").value,
+				y = document.getElementById("y").value,
+				width = document.getElementById("width").value,
+				height = document.getElementById("height").value;
+
+			drawRender.rect(x, y, width, height);
+		}, false);
+
+		drawCircle.addEventListener("click", function () {
+			var x = document.getElementById("xc").value,
+				y = document.getElementById("yc").value,
+				r = document.getElementById("r").value;
+
+			drawRender.circle(x, y, r);
+		}, false);
+
+		drawLine.addEventListener("click", function () {
+			var x1 = document.getElementById("x1").value,
+				y1 = document.getElementById("y1").value,
+				x2 = document.getElementById("x2").value,
+				y2 = document.getElementById("y2").value;
+
+			drawRender.line(x1, y1, x2, y2);
+		}, false);			
+	</script>
+</body>
+</html>

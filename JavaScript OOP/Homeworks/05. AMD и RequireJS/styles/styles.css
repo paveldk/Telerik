@@ -1,0 +1,40 @@
+/* CSS Document */
+html, body, div, img, ul, li, strong
+{
+    border: none;
+    margin: 0;
+    -ms-word-wrap: break-word;
+    padding: 0;
+    text-decoration: none;  
+    word-wrap: break-word;
+}
+
+ul {
+    margin: 0 auto;
+    list-style-type: none;
+    width: 303px;
+    height: 400px;
+}
+
+li {
+    text-align: center;
+    padding-top: 5px;
+    border: 1px solid blue;
+    display: none;
+    width : 283px;
+}
+
+li:hover, .current-selected:hover {
+    background-color: #ACDFFC;
+}
+
+strong {
+    text-align: center;
+}
+
+.current-selected {
+    margin: 0 auto;
+    text-align: center;
+    width: 300px;
+    border: 1px solid blue;
+}

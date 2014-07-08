@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM module</title>
+	<script src='scripts/domModule.js'></script>
+</head>
+<body>
+	<div>
+        <button id="appendChildButton">Append child</button>  
+        <button id="removeChildButton">Remove child</button>
+        <button id="addEventButton">Add event</button>
+        <button id="appendElementToBufferButton">Append element to buffer</button>
+    </div>
+
+	<div id = "wrapper"></div>
+
+	<script>
+		var appendChildButton = document.getElementById("appendChildButton"),
+			removeChildButton = document.getElementById("removeChildButton"),
+			addEventButton = document.getElementById("addEventButton"),
+			appendElementToBufferButton = document.getElementById("appendElementToBufferButton");
+
+
+		// some examples, you can check your owns ofcourse :)
+		appendChildButton.addEventListener("click", function () {
+			var div = document.createElement("div");
+
+			div.style.height = "100px";
+			div.style.backgroundColor = "red";
+
+			domModule.appendChild(div, "#wrapper");
+		}, false);
+
+		removeChildButton.addEventListener("click", function () {
+			domModule.removeChild("div", "#wrapper");
+		}, false);
+
+		addEventButton.addEventListener("click", function () {
+			domModule.addHandler("#wrapper div", "click", function(){alert("Clicked")});
+		}, false);	
+
+		appendElementToBufferButton.addEventListener("click", function () {
+			var div = document.createElement("div");
+
+
+			div.style.height = "10px";
+			div.style.backgroundColor = getRandomColor();
+
+			domModule.appendToBuffer("#wrapper", div)
+		}, false);		
+
+	</script>
+</body>
+</html>
