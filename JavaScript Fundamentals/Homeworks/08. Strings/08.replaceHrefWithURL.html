@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>Strings homework</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1> 
+            Write a JavaScript function that replaces in a HTML document given as string all the tags &lt;a href="…"&gt;…&lt;/a&gt; with corresponding tags [URL=…]…/URL]. Sample HTML fragment:
+        </h1>
+        <code>
+            &lt;p&gt;Please visit &lt;a href="http://academy.telerik. com"&gt;our site&lt;/a&gt; to choose a training course. Also visit &lt;a href="www.devbg.org"&gt;our forum&lt;/a&gt; to discuss the courses.&lt;/p&gt;
+        </code>
+        <code>
+           &lt;p&gt;Please visit [URL=http://academy.telerik. com]our site[/URL] to choose a training course. Also visit [URL=www.devbg.org]our forum[/URL] to discuss the courses.&lt;p&gt;
+        </code>
+    </header>
+    <div>
+        <label for = "websiteContent"> Input website content as text </label>
+        <input type = "text" id = "websiteContent" class = "task4">  
+
+        <button onclick="replaceHref(document.getElementById('websiteContent').value)">Replace</button> 
+    </div>
+
+	<div id="js-console"></div>				 
+	<script src="scripts/js-console.js"></script>
+    <script src="scripts/stringFormat.js"></script>
+	<script>
+		/* Task 8. Write a JavaScript function that replaces in a HTML document given as string all the tags <a   href="…">…</a> with corresponding tags [URL=…]…/URL]. Sample HTML fragment:
+            <p>Please visit <a href="http://academy.telerik. com">our site</a> to choose a training course. Also visit <a href="www.devbg.org">our forum</a> to discuss the courses.</p>
+            <p>Please visit [URL=http://academy.telerik. com]our site[/URL] to choose a training course. Also visit [URL=www.devbg.org]our forum[/URL] to discuss the courses.</p>
+        */
+
+        function replaceHref(websiteContent) {
+            // we're using Replace method for strings with text to replace and replacing text
+            var output = String(websiteContent).replace(/(\<a href=\")/g, '[URL=');
+            output = String(output).replace(/(">)/g, ']');
+            output = String(output).replace(/(\<\/a>)/g, '[/URL]');    
+            
+            jsConsole.writeLine(output);
+        }
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>Strings homework</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="styles/stylesAlt.css">
+</head>
+
+<body>
+    <header>
+        <h1> 
+            Write a function that extracts the content of a html page given as text. The function should return anything that is in a tag, without the tags:
+        </h1>
+        <code>
+            &lt;html&gt;&lt;head&gt;&lt;title&gt;Sample site&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;div&gt;text&lt;div&gt;more text&lt;/div&gt;and more...&lt;/div&gt;in body&lt;/body&gt;&lt;/html&gt;
+        </code>
+        <h1>
+            result:
+        </h1>
+        <code>
+            Sample sitetextmore textand more...in body
+        </code>
+    </header>
+    <div>
+        <label for = "websiteContent"> Input website content as text </label>
+        <textarea type = "text" id = "websiteContent"> </textarea>  
+
+        <button onclick="removeTags(document.getElementById('websiteContent').value)">Replace</button> 
+    </div>
+
+	<div id="js-console"></div>				 
+	<script src="scripts/js-console.js"></script>
+    <script src="scripts/stringFormat.js"></script>
+	<script>
+		/* Task 6. Write a function that extracts the content of a html page given as text. The function should return anything that is in a tag, without the tags:
+        <html><head><title>Sample site</title></head><body><div>text<div>more text</div>and more...</div>in body</body></html>
+        result:
+        Sample sitetextmore textand more...in body
+        */
+
+        function removeTags(websiteContent) {
+            var output = String(websiteContent).replace(/(<([^>]+)>)/ig, '');
+            jsConsole.writeLine(output);
+        }
+	</script>
+</body>
+
+</html>

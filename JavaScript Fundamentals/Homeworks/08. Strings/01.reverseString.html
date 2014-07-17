@@ -1,0 +1,41 @@
+<html>
+
+<head>
+	<title>Strings homework</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+
+<body>
+    <h1> 
+        Write a JavaScript function reverses string and returns it. Example: "sample"  "elpmas".
+    </h1>
+    <div>
+        <label for = "someString"> Input text: </label>
+        <input type = "text" id = "someString">  
+
+        <button onclick="reverseString(document.getElementById('someString').value)">Reverse it</button> 
+    </div>
+
+	<div id="js-console"></div>				 
+	<script src="scripts/js-console.js"></script>
+	<script>
+		// Task 1. Write a JavaScript function reverses string and returns it. Example: "sample"  "elpmas".
+
+        function reverseString(inputText) {
+            var reverseString = '',
+                i;
+
+            inputText = inputText || '';
+
+            for (i = 0; i < inputText.length; i++)
+            {
+                reverseString = inputText[i] + reverseString;    
+            }
+
+            jsConsole.writeLine(reverseString);
+        }
+	</script>
+</body>
+
+</html>

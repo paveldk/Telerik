@@ -1,0 +1,80 @@
+<html>
+
+<head>
+	<title>Data types and variables - Integer types</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+
+<body>
+	<div id="js-console"></div>				 
+	<script src="scripts/js-console.js"></script>
+	<script>
+		// Task 2 : write a script that shows the sign (+ or -) of the product of three real numbers without calculating it. Use a sequence of if statements.
+
+        var firstNumber = 9,
+        	secondNumber = 5,
+        	thirdNumber = -4;
+
+        if (firstNumber >= 0)       
+        {
+            if (secondNumber >= 0)
+            {
+                if (thirdNumber >= 0)
+                {
+                    //If all of the numbers are positive then the sign is +
+                    jsConsole.writeLine("The sign is +");
+                }
+                else
+                {
+                    //First two are positive but last is negative, sign -
+                    jsConsole.writeLine("The sign is -");
+                }
+            }
+            else
+            {
+                if (thirdNumber >= 0)
+                {
+                    //First and third are positive but second is negative, sign -
+                    jsConsole.writeLine("The sign is -");
+                }
+                else
+                {
+                    //First is positive and second and third are negative, sign +
+                    jsConsole.writeLine("The sign is +");
+                }
+            }
+        }
+        else
+        {
+            if (secondNumber >= 0)
+            {
+                if (thirdNumber >= 0)
+                {
+                    //Number two and three are positive but one is negative, sign -
+                    jsConsole.writeLine("The sign is -");
+                }
+                else
+                {
+                    //Number two is positive and one and three are negative, sign +
+                    jsConsole.writeLine("The sign is +");
+                }
+
+            }
+            else
+            {
+                if (thirdNumber >= 0)
+                {
+                    //Number one and two are negative and three is positive, sign +
+                    jsConsole.writeLine("The sign is +");
+                }
+                else
+                {
+                    //All is negative
+                    jsConsole.writeLine("The sign is -");
+                }
+            }
+        }
+	</script>
+</body>
+
+</html>

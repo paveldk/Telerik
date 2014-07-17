@@ -1,0 +1,25 @@
+/* CSS Document */
+html, body, div, h1, ul, li, a, p, article
+{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;	
+	word-wrap: break-word;
+}
+
+h1 {
+	font-size: 20px;
+}
+
+label, textarea, button, input {
+	float : left;
+	margin-right: 10px;
+}
+
+label, button, input {
+	margin-top: 25px;
+}
+
+input[type="checkbox"] {
+	margin-top: 30px;
+}

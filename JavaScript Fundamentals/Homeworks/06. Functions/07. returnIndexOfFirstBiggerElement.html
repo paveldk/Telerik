@@ -1,0 +1,56 @@
+<html>
+
+<head>
+	<title>Data types and variables - Integer types</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="styles/styles1.css">
+</head>
+
+<body>
+    <h1> 
+        Write a function that returns the index of the first element in array that is bigger than its neighbors, or -1, if there’s no such element.
+    </h1>
+    <div>
+        <label for = "numbers">Input numbers(separated by ','):</label>
+        <input type = "text" id = "numbers"> 
+        <button onclick="firstBigger(document.getElementById('numbers').value)">Count</button> 
+    </div>
+
+    <div></div>
+    <div></div>
+    <div></div>
+
+	<div id="js-console"></div>				 
+	<script src="scripts/js-console.js"></script>
+	<script>
+		// Task 7 : Write a function that returns the index of the first element in array that is bigger than its neighbors, or -1, if there’s no such element.
+
+        function firstBigger(numbers) {  
+            var arrayOfNumbers = numbers.split(',');
+
+            if (biggerNumber(arrayOfNumbers) !== -1) {
+                jsConsole.writeLine('The first number bigger then it\'s neighbours is at ' + biggerNumber(arrayOfNumbers) + ' position and it\'s number ' + arrayOfNumbers[biggerNumber(arrayOfNumbers)]);    
+            } else {
+                jsConsole.writeLine('There is no element bigger then it\'s neighbours');
+            }
+            
+            
+        }
+
+        function biggerNumber(arrayOfNumbers) {
+            for (var i = 1; i < arrayOfNumbers.length - 1; i++)
+            {
+                if ((arrayOfNumbers[i] > arrayOfNumbers[i - 1]) &&
+                  (arrayOfNumbers[i] > arrayOfNumbers[i + 1]))
+                {
+                    return i;    
+                }            
+            }
+
+            return -1; 
+        }
+
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<html>
+
+<head>
+	<title>Data types and variables - Integer types</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+
+<body>
+    <h1> 
+        Write a script that compares two char arrays lexicographically (letter by letter). 
+    </h1>
+    <div>
+        <label for = "firstString">Input first string:</label>
+        <input type = "text" id = "firstString"> 
+        <label for = "secondString">Input second string:</label>
+        <input type = "text" id = "secondString"> 
+        <button onclick="compareArray(document.getElementById('firstString').value, document.getElementById('secondString').value)">Find</button>   
+    </div>
+
+	<div id="js-console"></div>				 
+	<script src="scripts/js-console.js"></script>
+	<script>
+		// Task 2 :Write a script that compares two char arrays lexicographically (letter by letter).
+
+        // Char arrays are strings so I'm getting two strings and comparing them:
+        
+        function compareArray(firstString, secondString){
+		    var i,
+                maxLength,
+                bigger = 0;
+
+            if (firstString.length > secondString.length) {
+                maxLength = firstString.length;
+            }
+            else{
+                maxLength = secondString.length;
+            }
+
+            for (i = 0; i < maxLength; i+=1) {
+                if (firstString[i] > secondString[i]) {
+                    bigger = 1;
+                }
+                if (firstString[i] < secondString[i]) {
+                    bigger = 2;
+                }
+            };
+
+            if (bigger === 1) {
+                jsConsole.writeLine('First string is bigger');
+            } else if (bigger === 2) {
+                jsConsole.writeLine('Second string is bigger');
+            }
+            else{
+                jsConsole.writeLine('Equal strings');
+            }
+        }
+	</script>
+</body>
+
+</html>

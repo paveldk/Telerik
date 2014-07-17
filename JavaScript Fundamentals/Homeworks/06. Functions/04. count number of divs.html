@@ -1,0 +1,33 @@
+<html>
+
+<head>
+	<title>Data types and variables - Integer types</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="styles/styles1.css">
+</head>
+
+<body>
+    <h1> 
+        Write a function to count the number of divs on the web page
+    </h1>
+    <div>
+
+        <button onclick="FindNumberOfDivs()">Find</button>   
+    </div>
+
+    <div></div>
+    <div></div>
+    <div></div>
+
+	<div id="js-console"></div>				 
+	<script src="scripts/js-console.js"></script>
+	<script>
+		// Task 4 : Write a function to count the number of divs on the web page
+        function FindNumberOfDivs(text, word, checked) {                     
+            var count = document.getElementsByTagName('div').length;
+            jsConsole.writeLine('There is ' + count + ' divs in this webpage');
+        }
+	</script>
+</body>
+
+</html>

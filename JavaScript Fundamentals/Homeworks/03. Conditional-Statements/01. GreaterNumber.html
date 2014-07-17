@@ -1,0 +1,33 @@
+<html>
+
+<head>
+	<title>Data types and variables - Integer types</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+
+<body>
+	<div id="js-console"></div>				 
+	<script src="scripts/js-console.js"></script>
+	<script>
+		// Task 1 : Write an if statement that examines two integer variables and exchanges their values if the first one is greater than the second one.
+
+		var firstNumber = 7,
+        	secondNumber = 6,
+        	tempNumber; // yeah I know, bad naming :) but in this homework couldn't find better
+
+        jsConsole.writeLine("Number one is " + firstNumber + " and number two is " + secondNumber + ".");
+
+        if (firstNumber > secondNumber)
+        {
+            tempNumber = firstNumber;
+            firstNumber = secondNumber;
+            secondNumber = tempNumber;
+            jsConsole.writeLine("Exchanging...");
+        }
+
+       jsConsole.writeLine("Number one is " + firstNumber + " and number two is " + secondNumber + ".");
+
+	</script>
+</body>
+
+</html>
