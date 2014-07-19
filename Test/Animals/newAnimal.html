@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Animals</title>
+    <link href="styles/kendo.common.min.css" rel="stylesheet" />
+    <link href="styles/kendo.black.min.css" rel="stylesheet" />
+    <link href="styles/styles.css" rel="stylesheet" />
+	<script src="scripts/libs/require.js" data-main="scripts/app"></script>
+</head>
+<body>	
+	<nav id = "container">
+	</nav>
+    <div id="animal">
+        <ul>
+            <li>
+                <input type="text" id = "animalName" name="Animal name" placeholder="Animal name" required validationmessage="Please enter {0}" />
+            </li>
+            <li>
+                <input type="text" id = "species" name="Species" placeholder="Species" required validationmessage="Please enter {0}" />
+            </li>
+            <li>
+                <input type="text" id = "numberOfLegs" name="Number of legs" placeholder="Number of legs" required validationmessage="Please enter {0}" />
+            </li>
+        </ul>
+        <button id="animalSubmit">
+            Submit
+        </button>
+        <div id="status"></div>
+    </div>								 
+</body>
+</html>

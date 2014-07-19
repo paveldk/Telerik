@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Animals</title>
+    <link href="styles/kendo.common.min.css" rel="stylesheet" />
+    <link href="styles/kendo.black.min.css" rel="stylesheet" />
+    <link href="styles/styles.css" rel="stylesheet" />
+	<script src="scripts/libs/require.js" data-main="scripts/app"></script>
+</head>
+<body>	
+	<nav id = "container">
+	</nav>
+    <table id = "animals-containter">
+    </table>
+    <script id="animals-template" type="text/x-handlebars-template">
+        <table class="animals-list">
+            <tr class = "header-row">
+                <th>Name</th>
+                <th>Species</th>
+                <th>Number of legs</th>
+            </tr>       
+            {{#each animals}}  
+            <tr class = "animals-item">
+                <td>
+                    {{_name}}
+                </td>
+                <td>
+                    {{_species}}
+                </td>
+                 <td>
+                    {{_numberOfLegs}}
+                </td>                             
+            </tr>
+            {{/each}}           
+        </table>
+    </script>								 
+</body>
+</html>
