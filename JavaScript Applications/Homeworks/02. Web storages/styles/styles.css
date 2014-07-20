@@ -1,0 +1,54 @@
+/* CSS Document */
+html, body, div, h1, ul, li, a, p, aside
+{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;	
+	word-wrap: break-word;
+}
+
+body {
+	background-color: #F7F7F8;
+}
+
+div {
+	text-align: center;
+}
+
+#wrapper {
+	margin-top : 10px;
+	float : left;
+	width : 75%;
+}  
+
+.k-primary {
+    width: 150px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+} 
+
+.center {
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+} 
+
+.textField {
+	width: 250px;
+	text-align: center;
+}
+
+.logo {
+	font: 46px 'Matura MT Script Capitals';
+	color : #78C5E5;
+}
+
+.aside {
+	float : right;
+	text-align: center;
+	height: 100%;
+	width: 25%;
+	font: 22px 'Matura MT Script Capitals';
+	color : #78C5E5;
+}
