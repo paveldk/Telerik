@@ -52,3 +52,7 @@ div {
 	font: 22px 'Matura MT Script Capitals';
 	color : #78C5E5;
 }
+
+.saveScoreField {
+	display : none;
+}

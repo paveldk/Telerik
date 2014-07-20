@@ -4,22 +4,15 @@ define(["jquery", "kendo", "handlebars", "underscore"], function ($) {
 		numberOfAttemps = 0;
 
 	$(document).ready(function () {
-		// Hide/Show fields for start of the game
-		$('.guessField').show();
-		$('.results').show();
-		$('.aside').show();
-		$('.saveScoreField').hide();
-		$('.hallOfFame').hide();
+        // beautify the controls
+        $("#guessButton").kendoButton();
+        $("#saveScore").kendoButton();
 
-		// beautify the controls
-		$("#guessButton").kendoButton();
-		$("#saveScore").kendoButton();
-
-		$("#guessField").kendoMaskedTextBox({
+        $("#guessField").kendoMaskedTextBox({
             mask: "0-0-0-0"
         });
 
-		$("#playerName").kendoMaskedTextBox({
+        $("#playerName").kendoMaskedTextBox({
         });
 
 		// Generate the secret number
