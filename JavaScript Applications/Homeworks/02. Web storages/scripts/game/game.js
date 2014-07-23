@@ -25,7 +25,7 @@ define(["jquery", "kendo", "handlebars", "underscore"], function ($) {
 			numberOfSheeps = 0,
 			numberOfRams = 0;
 		
-		if (validateAttemp(currentAttemp)) {
+		if (validateAttemp(currentAttemp) && (currentAttemp[0] !== '0')) {
 			numberOfAttemps++;
 
 			for (var i = 0; i < 4; i++) {
@@ -46,7 +46,7 @@ define(["jquery", "kendo", "handlebars", "underscore"], function ($) {
 		}
 		else {
 			$('#guessField').val('');
-			window.alert('Please enter 4 different digits!');
+			window.alert('Please enter 4 different digits without leading 0!');
 		}
 
 		if (numberOfRams === 4) {
@@ -159,6 +159,10 @@ define(["jquery", "kendo", "handlebars", "underscore"], function ($) {
 					found = true;
 					break;
 				}
+			}
+
+			if (number.length === 0 && randomNumber === 0) {
+				found = true;
 			}
 
 			if (!found) {
