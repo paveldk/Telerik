@@ -1,7 +1,6 @@
-define(["jquery", "course", "student", "underscore", "kendo", "handlebars"], function ($, Course, Student) {
+define(["jquery", "course", "student", "ui", "underscore", "kendo"], function ($, Course, Student, ui) {
 	'use strict';
 	var course,
-		START_MENU_SIZE = 40,
 		jsonCourse = localStorage.getItem('course');
 
 	if (jsonCourse !== null) {
@@ -67,7 +66,7 @@ define(["jquery", "course", "student", "underscore", "kendo", "handlebars"], fun
 		
 		if(sPage === "viewStudents.html"){
 			students = course.listStudents();
-			drawKendoGrid(students);
+			ui.drawKendoGrid(students);
 		}
 
 		if (sPage === "statisticsByName.html") {
@@ -84,7 +83,7 @@ define(["jquery", "course", "student", "underscore", "kendo", "handlebars"], fun
 				.reverse()
 				.value();
 
-			drawKendoGrid(studentsWithFirstNameBeforeLastName);
+			ui.drawKendoGrid(studentsWithFirstNameBeforeLastName);
 		}
 
 		if (sPage === "statisticsByAge.html") {
@@ -100,7 +99,7 @@ define(["jquery", "course", "student", "underscore", "kendo", "handlebars"], fun
 				})
 				.value();
 
-			drawKendoGrid(studentsFilteredByAge);
+			ui.drawKendoGrid(studentsFilteredByAge);
 		}
 
 		if (sPage === "statisticsByMark.html") {
@@ -116,7 +115,7 @@ define(["jquery", "course", "student", "underscore", "kendo", "handlebars"], fun
 
 			result[0] = studentWithHighestMark;
 
-			drawKendoGrid(result);
+			ui.drawKendoGrid(result);
 		}
 
 		if (sPage === "mostCommonNames.html") {
@@ -144,27 +143,4 @@ define(["jquery", "course", "student", "underscore", "kendo", "handlebars"], fun
 				' and the most common last name is: ' + mostCommonLastName);
 		}
 	});
-
-	function drawKendoGrid(items) {
-		var lecturesTemplate = Handlebars.compile($('#students-template').html());
-
-		$('#students-containter').html(lecturesTemplate({
-			students : items
-		}));
-
-		$('#students-containter').kendoGrid({
-			dataSource: {
-				pageSize: 10
-			},
-			height: window.innerHeight - START_MENU_SIZE,
-			groupable: true,
-            sortable: true,
-            filterable: true,
-			pageable: {
-                refresh: true,
-                pageSizes: true,
-                buttonCount: 5
-            },
-        });
-	}
 });

@@ -1,7 +1,6 @@
-define(["jquery", "animals", "animal", "underscore", "kendo", "handlebars"], function ($, Animals, Animal) {
+define(["jquery", "animals", "animal", "ui", "underscore", "kendo", "handlebars"], function ($, Animals, Animal, ui) {
 	'use strict';
 	var animals,
-		START_MENU_SIZE = 40,
 		jsonCourse = localStorage.getItem('animals');
 
 	if (jsonCourse !== null) {
@@ -65,7 +64,7 @@ define(["jquery", "animals", "animal", "underscore", "kendo", "handlebars"], fun
 		
 		if(sPage === "viewAnimals.html"){
 			animalsList = animals.listAnimals();
-			drawKendoGrid(animalsList);
+			ui.drawKendoGrid(animalsList);
 		}
 
 		if(sPage === "groupBySpecies.html") {
@@ -88,7 +87,7 @@ define(["jquery", "animals", "animal", "underscore", "kendo", "handlebars"], fun
 				}
 			}
 
-			drawKendoGrid(result);
+			ui.drawKendoGrid(result);
 		}
 
 		if(sPage === "totalNumberOfLegs.html") {
@@ -104,27 +103,4 @@ define(["jquery", "animals", "animal", "underscore", "kendo", "handlebars"], fun
 			$('#numberOfLegs').html('Total number of legs is: ' + numberOfLegs);
 		}
 	});
-
-	function drawKendoGrid(items) {
-		var lecturesTemplate = Handlebars.compile($('#animals-template').html());
-
-		$('#animals-containter').html(lecturesTemplate({
-			animals : items
-		}));
-
-		$('#animals-containter').kendoGrid({
-			dataSource: {
-				pageSize: 10
-			},
-			height: window.innerHeight - START_MENU_SIZE,
-			groupable: true,
-            sortable: true,
-            filterable: true,
-			pageable: {
-                refresh: true,
-                pageSizes: true,
-                buttonCount: 5
-            },
-        });
-	}
 });

@@ -5,15 +5,14 @@
 			kendo: "libs/kendo.web.min",
 			handlebars: "libs/handlebars",
 			underscore: "libs/underscore",
-			menu: "students/menu",
+			ui: "students/ui",
 			course: "students/course",
 			student: "students/student",
 			events: "students/events",
 		}
 	});
 
-	require(["jquery", "menu", "events"], function ($, Menu) {
-		var menu = new Menu($('#menu'), $('#container'));
-		menu.draw();
+	require(["jquery", "ui", "events"], function ($, ui) {
+		ui.loadMenu('#menu', $('#container'));
 	});
 }());
