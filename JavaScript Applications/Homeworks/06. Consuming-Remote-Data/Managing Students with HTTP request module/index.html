@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>Student management system</title>
+	<script src="scripts/libs/require.js" data-main="scripts/app"></script>
+</head>
+<body>
+	<h1>Task one and Task three from homework</h1>
+	<div>
+		<label for="studentName">Enter  name:</label>
+		<input id="studentName" type="text"/>
+
+		<label for="studentGrade">Enter grade:</label>
+		<input id="studentGrade" type="text"/>
+
+		<button id="addStudent">Add student</button>
+	</div>
+	<div>
+		<label for="studentId">Enter Id:</label>
+		<input id="studentId" type="text"/>
+		<button id="deleteStudent">Delete student</button>
+	</div>  
+	<div>
+		<strong id="success"></strong>
+		<strong id="error"></strong>
+	</div>
+	<div>
+		<button id="showStudents">Show all students</button>
+		<div id="studentsList"></div>
+	</div>
+</body>
+</html>
