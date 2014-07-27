@@ -2,7 +2,7 @@
 	require.config({
 		paths: {
 			jquery: "libs/jquery.min",
-			ui: "twitter/ui",
+			ui: "twitterFeed/ui",
 		}
 	});
 

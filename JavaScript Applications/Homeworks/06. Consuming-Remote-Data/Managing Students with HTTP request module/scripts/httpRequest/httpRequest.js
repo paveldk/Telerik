@@ -1,48 +1,49 @@
-define(['jquery', 'rsvp'], function () {
+define(['Q'], function (Q) {
 	var httpRequest = (function () {
 		var getJSON = function(url, contentType, acceptType) {
-			var promise = new RSVP.Promise(function (resolve, reject) {
-				$.ajax({
-					url: url,
-					type: 'GET',
-					contentType : contentType || '',
-					acceptType : acceptType || '',
-					success: function (data) {
-						resolve(data);
-					},
-					error: function (err) {
-						reject(err);
-					}
-				});
+			var deferred = Q.defer();
+
+			$.ajax({
+				url: url,
+				type: 'GET',
+				contentType : contentType || '',
+				acceptType : acceptType || '',
+				success: function (data) {
+					deferred.resolve(data);
+				},
+				error: function (err) {
+					deferred.reject(err);
+				}
 			});
 
-			return promise;
+			return deferred.promise;
 		};
 
 		var postJSON = function(url, contentType, acceptType, data) {
-			var promise = new RSVP.Promise(function (resolve, reject) {
-				if (data) {
-					data = JSON.stringify(data);
-				}
-				else {
-					data = {_method: 'delete'};
-				}
+			var deferred = Q.defer();
 
-				$.ajax({
-					url: url,
-					type: "POST",
-					contentType: contentType,
-					acceptType: acceptType,
-					data: data,
-					success: function (data) {
-						resolve(data);
-					},
-					error: function (err) {
-						reject(err);
-					}
-				});
+			if (data) {
+				data = JSON.stringify(data);
+			}
+			else {
+				data = {_method: 'delete'};
+			}
+
+			$.ajax({
+				url: url,
+				type: "POST",
+				contentType: contentType,
+				acceptType: acceptType,
+				data: data,
+				success: function (data) {
+					deferred.resolve(data);
+				},
+				error: function (err) {
+					deferred.reject(err);
+				}
 			});
-			return promise;
+
+			return deferred.promise;
 		};
 
 		return {
