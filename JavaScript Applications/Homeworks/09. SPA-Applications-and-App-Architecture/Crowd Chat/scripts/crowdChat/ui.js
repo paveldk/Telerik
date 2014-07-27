@@ -31,7 +31,7 @@ define(['jquery', 'handlebars', 'kendo'], function ($) {
 
 		var username = localStorage.getItem('CrowdChatUserName');
 
-		if (username) {			
+		if (username) {
 			addChatArea();
 			setMessageFeed(chatItems);
 			$('#messageBox').focus();
@@ -62,17 +62,16 @@ define(['jquery', 'handlebars', 'kendo'], function ($) {
 		var chatItems = [],
 			div = $('<div> </div>').attr('id', 'feed-container').addClass('feed-container');
 
+		items.reverse();
 		items.forEach(function(item) {
 			var newText,
 				newBy;
 
-			newText = item.text.replace(/&nbsp;/gi, ' ');
-			newBy = item.by;
+			newText = item.text.replace(/&nbsp;/gi, ' ').replace(/&#39/g, "'");
+			newBy = item.by.replace(/&nbsp;/gi, ' ').replace(/&#39/g, "'");
 
 			chatItems.push({text : newText, by : newBy});
 		});
-
-		chatItems.reverse();
 
 		$('#main-content').append(div);
 

@@ -5,7 +5,7 @@
 			sammy: "libs/sammy-latest.min",
 			handlebars: "libs/handlebars",
 			kendo: "libs/kendo.web.min",
-			rsvp: "libs/rsvp.min",
+			Q: "libs/q.min",
 			httpRequest : "crowdChat/httpRequest",
 			logic: "crowdChat/logic",
 			ui: "crowdChat/ui",

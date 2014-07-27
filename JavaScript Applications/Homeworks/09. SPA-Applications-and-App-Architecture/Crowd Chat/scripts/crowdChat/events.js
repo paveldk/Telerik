@@ -5,6 +5,21 @@ define(['jquery', 'logic'], function ($, logic) {
 	});
 
 	$(document).on("click", "#sendButton", function(){
+		postMessage();
+	});
+
+	$(document).on("click", "#confirmButton", function(){
+		localStorage.setItem("CrowdChatUserName", $('#nickNameBox').val());
+		$('#nickNameBox').val(' ');
+	});
+
+	$(document).on("keyup", "#messageBox", function(){
+		if(event.keyCode == 13){
+			postMessage();
+		}
+	});
+
+	var postMessage = function() {
 		var username = localStorage.getItem("CrowdChatUserName");
 			
 		var	message = {
@@ -14,12 +29,5 @@ define(['jquery', 'logic'], function ($, logic) {
 		
 		logic.postMessage(message);
 		$('messageBox').val(' ');
-	});
-
-	$(document).on("click", "#confirmButton", function(){
-		localStorage.setItem("CrowdChatUserName", $('#nickNameBox').val());
-		$('#nickNameBox').val(' ');
-	});
-
-
+	};
 });
