@@ -43,7 +43,7 @@ define(['httpRequest', "ui"], function (httpRequest, ui) {
 			httpRequest.getJSON(url, contentType, acceptType)
 				.then(function (data) {
 						if (dataLength !== data.length && currentPage === 'chat') {
-							ui.initChatPage(data);
+							ui.setMessageFeed(data);
 						}
 						dataLength = data.length;
 					}, function (err) {

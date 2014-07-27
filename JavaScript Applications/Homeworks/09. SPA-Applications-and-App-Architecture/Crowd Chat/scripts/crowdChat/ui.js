@@ -59,6 +59,7 @@ define(['jquery', 'handlebars', 'kendo'], function ($) {
 	};
 
 	var setMessageFeed = function(items) {
+		$('feed-container').html(' ');
 		var chatItems = [],
 			div = $('<div> </div>').attr('id', 'feed-container').addClass('feed-container');
 
@@ -118,6 +119,7 @@ define(['jquery', 'handlebars', 'kendo'], function ($) {
 		initMainPage: initMainPage,
 		initChatPage: initChatPage,
 		initAboutPage: initAboutPage,
-		showError: showError
+		showError: showError,
+		setMessageFeed: setMessageFeed
 	};
 });
