@@ -1,5 +1,7 @@
 Java scrpit Application Exam
 ==================================
+
+```bash
 $ tree
 .
 |-- index.html
