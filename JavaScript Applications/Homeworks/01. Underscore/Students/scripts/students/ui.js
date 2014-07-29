@@ -6,6 +6,8 @@ define(["jquery", "handlebars"], function ($) {
 		container.load('menu.html', function() {
 			$(menu).kendoMenu();
 		});
+
+		$('#studentSubmit').kendoButton();
 	};
 
 	function drawKendoGrid(items) {
