@@ -13,7 +13,7 @@ $ tree
 |-- getPosts.html
 |-- mocha-html-reporter.html
 |-- scripts
-|   |-- crowdShare
+|   |-- crowdChat
 |   |   |--event.js
 |   |   |--logic.js
 |   |   |--ui.js
