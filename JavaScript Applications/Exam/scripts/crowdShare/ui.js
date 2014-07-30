@@ -71,33 +71,27 @@ define(['jquery', 'handlebars', 'kendo'], function ($) {
 	};
 
 	function drawKendoGrid(items, postsCount) {
-		var postsTemplate = Handlebars.compile($('#posts-template').html());
+		$('#grid').kendoGrid({
+			dataSource: {
+				data : items,
+				pageSize: postsCount|0 || 10
+			},
+			height: window.innerHeight - START_MENU_SIZE,
+			groupable: true,
+			sortable: true,
+			filterable: true,
+			pageable: {
+				refresh: true,
+				pageSizes: true,
+				buttonCount: 5
+			},
+			columns:	[	{ field: "user.username", title: "User" },
+							{ field: "postDate", title: "Date"},
+							{ field: "title", title: "Title"},
+							{ field: "body", title: "Body"},
+						]
+		});
 
-		$('#posts-containter').html(postsTemplate({
-			posts : items
-		}));
-
-		if ($('.k-grid').html()) {
-			var grid = $('#posts-containter').data("kendoGrid");
-			ds = grid.dataSource;
-			ds.pageSize = postsCount;
-		}
-		else {
-			$('#posts-containter').kendoGrid({
-				dataSource: {
-					pageSize: postsCount || 10
-				},
-				height: window.innerHeight - START_MENU_SIZE,
-				groupable: true,
-				sortable: true,
-				filterable: true,
-				pageable: {
-					refresh: true,
-					pageSizes: true,
-					buttonCount: 5
-				},
-			});
-		}
 	}
 
 	return {

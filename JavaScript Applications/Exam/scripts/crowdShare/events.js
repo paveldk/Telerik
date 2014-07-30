@@ -65,7 +65,7 @@ define(['jquery', 'logic'], function ($, logic) {
 
 	// Get sorting
 	$(document).on("click", ".k-header", function () {
-		var grid = $('#posts-containter').data("kendoGrid"),
+		var grid = $('#grid').data("kendoGrid"),
 			ds = grid.dataSource,
 			sort = ds.sort();
 
