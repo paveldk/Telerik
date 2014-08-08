@@ -32,6 +32,13 @@
             this.controller = new CarsController(this.carsData);
         }
 
+
+        [TestMethod]
+        public void CreatingCarWithoutParametersShouldCreateACar()
+        {
+            new CarsController();
+        }
+
         [TestMethod]
         public void IndexShouldReturnAllCars()
         {
@@ -89,7 +96,7 @@
                 Year = 2014
             };
             
-            var model = (Car)this.GetModel(() => this.controller.Details(100));
+            var model = (Car)this.GetModel(() => this.controller.Details(-1));
         }
 
         [TestMethod]
@@ -185,7 +192,6 @@
 
             var cars = (IList<Car>)this.GetModel(() => this.controller.Sort(""));
         }
-
 
         private object GetModel(Func<IView> funcView)
         {

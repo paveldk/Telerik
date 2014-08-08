@@ -1,0 +1,14 @@
+C:\Users\Mastermind\Desktop\Exam\Изпит\Niki\bin\Debug\ComputerParts.exe.config
+C:\Users\Mastermind\Desktop\Exam\Изпит\Niki\obj\Debug\ComputerParts.csprojResolveAssemblyReference.cache
+C:\Users\Mastermind\Desktop\Exam\Изпит\Niki\bin\Debug\ComputerParts.exe
+C:\Users\Mastermind\Desktop\Exam\Изпит\Niki\bin\Debug\ComputerParts.pdb
+C:\Users\Mastermind\Desktop\Exam\Изпит\Niki\bin\Debug\System.Collections.Generic.dll
+C:\Users\Mastermind\Desktop\Exam\Изпит\Niki\obj\Debug\ComputerParts.exe
+C:\Users\Mastermind\Desktop\Exam\Изпит\Niki\obj\Debug\ComputerParts.pdb
+C:\Users\Mastermind\Desktop\Exam\Изпит\Computers\bin\Debug\ComputerParts.exe.config
+C:\Users\Mastermind\Desktop\Exam\Изпит\Computers\obj\Debug\ComputerParts.exe
+C:\Users\Mastermind\Desktop\Exam\Изпит\Computers\obj\Debug\ComputerParts.pdb
+C:\Users\Mastermind\Desktop\Exam\Изпит\Computers\obj\Debug\ComputerParts.csprojResolveAssemblyReference.cache
+C:\Users\Mastermind\Desktop\Exam\Изпит\Computers\bin\Debug\ComputerParts.exe
+C:\Users\Mastermind\Desktop\Exam\Изпит\Computers\bin\Debug\ComputerParts.pdb
+C:\Users\Mastermind\Desktop\Exam\Изпит\Computers\bin\Debug\System.Collections.Generic.dll

@@ -1,0 +1,80 @@
+Design pattern: Simple Factory
+Не съм го имплементирал
+
+Design pattern: Strategy
+private static void CreateDevices in the Computer Entry point. Depending on what Devices are put when calling the class - diffrent devices are created.
+Гореспоменатия метод. Пускат ли се различни устройства(Hp, Dell, Lenovo), точно които трябва се създават.
+
+Design pattern: Template Method
+Така и не намерих къде да го сложа :) Може би за направата на Компютър, Лаптоп, Сървър, но звучи тъпо да бъдат в точно определен ред - просто няма значение как се правят. Същото е и за компонентите, дали ще създам първо Рамта, а после ЦПУ или обратно няма значение :) За това го зарязах.
+
+Design pattern: Abstract factory
+In the folder Computer factory. One asbtract method and 3 implementations for the three different families computers.
+В папката Computer factory. Абстрактен клас и 3 наследници за трите вида производители.
+
+Design pattern: Composite
+Трябваше да е за Хардисковете, но не остана време :(
+
+Design pattern: Mediator
+Motherboard is Mediator for Ram, Videocard, Cpu, HardDrives and the devices. The devices knows only for motherboard, and motherboard knows for everything else.
+Дънната платка е медиатор между частите от една страна, и устройствата от друга. Те знае само каква дънна платна ползват, а дънната платка знае какви компоненти има.
+
+
+
+
+
+Found bottlenecks:
+
+1) do
+{
+	randomNumber = Random.Next(0, 500);
+}
+while (!(randomNumber >= a && randomNumber <= b));
+
+Unneccessary, just need randomNumber = Random.Next(a, b);
+
+Тук се опитва да даде рандъм число между две подадени, пък после дава рандъм от 0 до 500 и проверява дали е в рейндж, ако не пак рандъм :) няма смисъл.
+
+
+2) The others seems to be fixed before JustTrace...atm no bottlenecks detected, buggest hotspot is Console.ReadLine() :) and that's not my method.
+Другия просто JustTrace не го открива....found bottlenecks 0. Може би съм го изчистил при преместванията :) Има само 1 hotspot, но той си е System метод :) ReadLine().
+
+
+
+
+Found bugs:
+1) if (number != guessNumber)
+	instead of 
+	if (number + 1 != guessNumber + 1)
+
+The others:
+Bug fixed during the refactoring....can't even remember which they were.
+Май съм ги фикснал по време на рефакторирането, програмата работи, при това точно, а не мога да се сетя какво точно съм махнал, променил.
+
+
+
+
+
+Single responsibility principle
+Every component has it's own class
+Всеки компонент има свой собствен клас, като върши само специфични за него неща
+
+
+Open/closed principle
+Every single class is relying only on abstractions in their constructors and methods(mostly interfaces)
+Всеки клас разчита само на асбтракции, което го прави лесно разширим.
+
+
+Liskov substitution principle
+Separated Computer, laptop and server, becouse Laptop can't replace Computer and so on. 128bit proccessor can replaces, and can be replaces by 32bit - its parent
+Няма дете, което да не може да замени своя родител. 128 битовия процесор може да бъде заместен и да замести 32 битовия, неговия родител.
+
+
+Interface segregation principle
+Every class has it's own small interface.
+Интерфейсите са малки, максимум с по 3-4 метода, осигурявайки само нужните за класа действия.
+
+
+Dependency inversion principle
+Every class is called with interfaces. Mostly used constructor injection.
+Всеки клас е викан с интерфейси, като по този начин няма създаване на нови класове извън Factory методите. Предимно съм използва constructor injection.

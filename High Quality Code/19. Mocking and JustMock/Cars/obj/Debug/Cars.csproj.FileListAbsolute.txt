@@ -1,0 +1,5 @@
+D:\Dropbox\Telerik\High Quality Code\19. Mocking and JustMock\Demo\Cars\bin\Debug\Cars.dll
+D:\Dropbox\Telerik\High Quality Code\19. Mocking and JustMock\Demo\Cars\bin\Debug\Cars.pdb
+D:\Dropbox\Telerik\High Quality Code\19. Mocking and JustMock\Demo\Cars\obj\Debug\Cars.csprojResolveAssemblyReference.cache
+D:\Dropbox\Telerik\High Quality Code\19. Mocking and JustMock\Demo\Cars\obj\Debug\Cars.dll
+D:\Dropbox\Telerik\High Quality Code\19. Mocking and JustMock\Demo\Cars\obj\Debug\Cars.pdb

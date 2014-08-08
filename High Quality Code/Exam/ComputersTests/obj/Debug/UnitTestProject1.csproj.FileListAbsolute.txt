@@ -1,0 +1,9 @@
+C:\Users\Mastermind\Desktop\Exam\Изпит\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+C:\Users\Mastermind\Desktop\Exam\Изпит\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+C:\Users\Mastermind\Desktop\Exam\Изпит\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache
+C:\Users\Mastermind\Desktop\Exam\Изпит\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+C:\Users\Mastermind\Desktop\Exam\Изпит\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
+C:\Users\Mastermind\Desktop\Exam\Изпит\UnitTestProject1\bin\Debug\ComputerParts.exe
+C:\Users\Mastermind\Desktop\Exam\Изпит\UnitTestProject1\bin\Debug\ComputerParts.pdb
+C:\Users\Mastermind\Desktop\Exam\Изпит\UnitTestProject1\bin\Debug\Telerik.JustMock.dll
+C:\Users\Mastermind\Desktop\Exam\Изпит\UnitTestProject1\bin\Debug\Telerik.JustMock.xml

@@ -1,0 +1,11 @@
+D:\Dropbox\Telerik\High Quality Code\19. Mocking and JustMock\Demo\Cars.Tests.JustMock\bin\Debug\Cars.Tests.JustMock.dll
+D:\Dropbox\Telerik\High Quality Code\19. Mocking and JustMock\Demo\Cars.Tests.JustMock\bin\Debug\Cars.Tests.JustMock.pdb
+D:\Dropbox\Telerik\High Quality Code\19. Mocking and JustMock\Demo\Cars.Tests.JustMock\bin\Debug\Cars.dll
+D:\Dropbox\Telerik\High Quality Code\19. Mocking and JustMock\Demo\Cars.Tests.JustMock\bin\Debug\Moq.dll
+D:\Dropbox\Telerik\High Quality Code\19. Mocking and JustMock\Demo\Cars.Tests.JustMock\bin\Debug\Cars.pdb
+D:\Dropbox\Telerik\High Quality Code\19. Mocking and JustMock\Demo\Cars.Tests.JustMock\bin\Debug\Moq.xml
+D:\Dropbox\Telerik\High Quality Code\19. Mocking and JustMock\Demo\Cars.Tests.JustMock\bin\Debug\Telerik.JustMock.xml
+D:\Dropbox\Telerik\High Quality Code\19. Mocking and JustMock\Demo\Cars.Tests.JustMock\obj\Debug\Cars.Tests.JustMock.csprojResolveAssemblyReference.cache
+D:\Dropbox\Telerik\High Quality Code\19. Mocking and JustMock\Demo\Cars.Tests.JustMock\obj\Debug\Cars.Tests.JustMock.dll
+D:\Dropbox\Telerik\High Quality Code\19. Mocking and JustMock\Demo\Cars.Tests.JustMock\obj\Debug\Cars.Tests.JustMock.pdb
+D:\Dropbox\Telerik\High Quality Code\19. Mocking and JustMock\Demo\Cars.Tests.JustMock\bin\Debug\Telerik.JustMock.dll
