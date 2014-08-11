@@ -1,14 +1,15 @@
 define(['Q'], function (Q) {
 	var httpRequest = (function () {
-		var getJSON = function(url, contentType, acceptType) {
+		var getJSON = function (url, contentType, acceptType) {
 			var deferred = Q.defer();
+
 			Q.stopUnhandledRejectionTracking();
 
 			$.ajax({
 				url: url,
 				type: 'GET',
-				contentType : contentType || '',
-				acceptType : acceptType || '',
+				contentType: contentType || '',
+				acceptType: acceptType || '',
 				success: function (data) {
 					deferred.resolve(data);
 				},
@@ -20,7 +21,7 @@ define(['Q'], function (Q) {
 			return deferred.promise;
 		};
 
-		var postJSON = function(url, contentType, acceptType, data, sessionKey) {
+		var postJSON = function (url, contentType, acceptType, data, sessionKey) {
 			var deferred = Q.defer(),
 				type = 'PUT';
 
@@ -51,12 +52,11 @@ define(['Q'], function (Q) {
 			return deferred.promise;
 		};
 
-
-
 		return {
 			getJSON: getJSON,
 			postJSON: postJSON
 		};
 	}());
+
 	return httpRequest;
 });

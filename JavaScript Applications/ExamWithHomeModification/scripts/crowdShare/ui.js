@@ -1,22 +1,27 @@
 define(['jquery', 'handlebars', 'kendo'], function ($) {
-	var START_MENU_SIZE = 300;
+	var START_MENU_SIZE = 300,
+		consts = {
+			$mainContent: $("#main-content")
+		};
 
 	var initHomePage = function() {
 		var username = localStorage.getItem('crowdShareUserName');
 		
 		initPage('#menu', $('#menu-container'));
 
-		$('#main-content').load('home.html', function() {
+		consts.$mainContent.load('home.html', function() {
 			if (username && username !=='' && username !=='null') {
 				$('#logout').text('Welcome: ' + username + ' (Logout)');
 			}
 		});
 	};
 
-	var initLoginPage = function(chatItems) {
+	var initLoginPage = function (chatItems) {
+		// chatItems never used
+
 		initPage('#menu', $('#menu-container'));
 
-		$('#main-content').load('login.html', function() {
+		consts.$mainContent.load('login.html', function() {
 			$('#login-nickname').kendoMaskedTextBox();
 			$('#login-password').kendoMaskedTextBox();
 			$('#login-button').kendoButton();
@@ -27,7 +32,7 @@ define(['jquery', 'handlebars', 'kendo'], function ($) {
 	var initRegisterPage = function() {
 		initPage('#menu', $('#menu-container'));
 
-		$('#main-content').load('register.html', function() {
+		consts.$mainContent.load('register.html', function() {
 			$('#register-nickname').kendoMaskedTextBox();
 			$('#register-password').kendoMaskedTextBox();
 			$('#repeat-register-password').kendoMaskedTextBox();
@@ -39,7 +44,7 @@ define(['jquery', 'handlebars', 'kendo'], function ($) {
 	var initCreatePostPage = function(chatItems) {
 		initPage('#menu', $('#menu-container'));
 
-		$('#main-content').load('createPost.html', function() {
+		consts.$mainContent.load('createPost.html', function() {
 			$('#createpost-title').kendoMaskedTextBox();
 			$('#createpost-body').kendoMaskedTextBox();
 			$('#post-button').kendoButton();
@@ -50,7 +55,7 @@ define(['jquery', 'handlebars', 'kendo'], function ($) {
 	var initGetPostsPage = function(chatItems) {
 		initPage('#menu', $('#menu-container'));
 
-		$('#main-content').load('getPosts.html', function() {
+		consts.$mainContent.load('getPosts.html', function() {
 			$('#getmessages-button').kendoButton();
 			$('#search-title-body').kendoMaskedTextBox();
 			$('#search-user').kendoMaskedTextBox();
@@ -60,14 +65,15 @@ define(['jquery', 'handlebars', 'kendo'], function ($) {
 	};
 
 	var showError = function(err) {
-		$('#main-content').text(err.responseText);
+		consts.$mainContent.text(err.responseText);
 	};
 
 	var initPage = function (menu, container) {
 		container.load('menu.html', function() {
 			$(menu).kendoMenu();
 		});
-		$('#main-content').text(' ');
+
+		consts.$mainContent.text(' ');
 	};
 
 	function drawKendoGrid(items, postsCount) {

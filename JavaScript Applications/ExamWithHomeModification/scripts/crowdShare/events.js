@@ -1,40 +1,70 @@
 define(['jquery', 'logic'], function ($, logic) {
-	// lOG IN
-	$(document).on("click", "#login-button", function(){
-		var username = $('#login-nickname').val(),
-			password = $('#login-password').val();
+	var consts = {
+		minLength: 6,
+		maxLength: 40,
 
-		if (username.length<6 || username.length>40) {
-			alert('Username must be between 6 and 40 symbols!');
+		dom: {
+			login: {
+				username: '#login-nickname',
+				password: '#login-password'
+			},
+
+			register: {
+			},
+
+			//etc
+		},
+
+		msg: {
+			incorrectData: 'Please enter correct data!'
 		}
-		else {
-			if (password !== '' && username !== '') {
-				logic.login(username, password);
-			}
-			else {
-				alert('Please enter correct data!');
-			}
+	}
+
+	function isDataValid(username, password) {
+		if (username && password && hasCorrectLength(username)) {
+			return true;
+		}
+
+		return false;
+	}
+
+	function hasCorrectLength(param) {
+		if (param.length < consts.minLength || param.length > consts.maxLength) {
+			return false;
+		}
+
+		return true;
+	}
+
+	// lOG IN
+	$(document).on("click", "#login-button", function () {
+		var username = $(consts.dom.login.username).val(),
+			password = $(consts.dom.login.password).val();
+
+		if (isValidData(username, password)) {
+			logic.logic(username, password)
+		} else {
+			alert(consts.msg.incorrectData);
 		}
 	});
 
 	// REGISTER
-	$(document).on("click", "#register-button", function(){
+	$(document).on("click", "#register-button", function () {
+		// same as login
+
 		var username = $('#register-nickname').val(),
 			password = $('#register-password').val(),
 			repeatPassword = $('#repeat-register-password').val();
 
-		if (username.length<6 || username.length>40) {
+		if (username.length < 6 || username.length > 40) {
 			alert('Username must be between 6 and 40 symbols!');
-		}
-		else {
+		} else {
 			if (password !== repeatPassword) {
 				alert("The passwords don't match! Please enter them again!");
-			}
-			else {
-				if (password !== '' && username !== '') {
+			} else {
+				if (password && username) {
 					logic.registerAccount(username, password);
-				}
-				else {
+				} else {
 					alert('Please enter correct data!');
 				}
 			}
@@ -42,24 +72,23 @@ define(['jquery', 'logic'], function ($, logic) {
 	});
 
 	// CREATE POST
-	$(document).on("click", "#post-button", function(){
+	$(document).on("click", "#post-button", function () {
 		var title = $('#createpost-title').val(),
 			body = $('#createpost-body').val();
 
-		if (title !== '' && body !== '') {
+		if (title && body) {
 			logic.postMessage(title, body);
-		}
-		else {
-			alert('Please enter correct data!');
+		} else {
+			alert(consts.msg.incorrectData);
 		}
 	});
 
 	// GET POSTS
-	$(document).on("click", "#getmessages-button", function(){
+	$(document).on("click", "#getmessages-button", function () {
 		var searchUser = $('#search-user').val(),
 			searchTitleBody = $('#search-title-body').val(),
 			postsCount = $('#posts-count').val();
-		
+
 		logic.getMessages(searchUser, searchTitleBody, postsCount);
 	});
 

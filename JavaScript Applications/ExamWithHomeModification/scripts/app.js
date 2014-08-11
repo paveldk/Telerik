@@ -1,4 +1,5 @@
-﻿(function () {
+(function () {
+	//move to config 
 	require.config({
 		paths: {
 			jquery: "libs/jquery.min",
@@ -41,7 +42,6 @@
 			this.get("#/getposts", function () {
 				ui.initGetPostsPage();
 			});
-
 		});
 
 		app.run("#/");
